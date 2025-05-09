@@ -175,6 +175,8 @@ section h2 {
     align-items: center;
 }
 
+/* Style for both picture element and img */
+.location picture,
 .location img {
     max-width: 100%;
     width: 100%;
@@ -182,8 +184,22 @@ section h2 {
     height: auto;
     /* Maintain aspect ratio */
     border-radius: var(--border-radius);
-    aspect-ratio: 3 / 2;
-    /* Updated to match natural aspect ratio of 1.5 (612:408) */
+}
+
+/* Mobile image aspect ratio */
+@media (max-width: 767px) {
+    .location picture {
+        aspect-ratio: 3 / 2;
+        /* Maintain aspect ratio for mobile image (400:267 = 1.5 = 3/2) */
+    }
+}
+
+/* Desktop image aspect ratio */
+@media (min-width: 768px) {
+    .location picture {
+        aspect-ratio: 3 / 2;
+        /* Maintain aspect ratio for desktop image (612:408 = 1.5 = 3/2) */
+    }
 }
 
 .location p {
