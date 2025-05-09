@@ -1,0 +1,82 @@
+/* Media Query for Medium Devices - Tablets */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Navigation changes for larger screens */
+    #hamburgerBtn {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        border-bottom: none;
+    }
+
+    /* Two-column layout for top sections */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "heading heading"
+            "course-work location"
+            "certificate certificate";
+        gap: 1rem;
+    }
+
+    main h1 {
+        grid-area: heading;
+    }
+
+    .course-work {
+        grid-area: course-work;
+        height: 100%;
+    }
+
+    .location {
+        grid-area: location;
+        height: 100%;
+    }
+
+    .certificate {
+        grid-area: certificate;
+    }
+
+    /* Course container changes for medium screens */
+    .courses-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query for Large Devices - Desktops */
+@media screen and (min-width: 1024px) {
+
+    /* Main content layout improvements */
+    main {
+        padding: 2rem;
+    }
+
+    /* Course container changes for large screens */
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Enhance hover effects on larger screens */
+    .course-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
+
+    /* Improve button hover effects */
+    .filter-buttons button:hover {
+        background-color: #2a5d80;
+    }
+}
