@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WDD 231 - Course Home Page</title>
+		<meta name="author" content="Sam Bonfanti" />
+		<meta name="description" content="Course home page for Web and Computer Programming Certificate" />
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/small.css" />
+		<link rel="stylesheet" href="styles/larger.css" />
+		<script src="scripts/script.js" type="module" defer></script>
+	</head>
+	<body>
+		<header>
+			<img src="images/profile.webp" alt="Profile Photo" class="profile-photo" />
+			<span class="name">Sam Bonfanti</span>
+			<button id="hamburgerBtn">☰</button>
+		</header>
+		<nav>
+			<ul id="primaryNav">
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="#">Chamber</a></li>
+				<li><a href="#">Final</a></li>
+				<li><a href="https://github.com/CodeMaster7">GitHub Profile</a></li>
+				<li><a href="https://www.linkedin.com/in/sambonfanti">LinkedIn</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Home</h1>
+			<section class="course-work">
+				<h2>Course Work</h2>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</section>
+			<section class="location">
+				<h2>Arizona, United States</h2>
+				<div class="image-container">
+					<img src="images/arizona.jpg" alt="Arizona Landscape" />
+					<p>Arizona Landscape</p>
+				</div>
+			</section>
+			<section class="certificate">
+				<h2>Web and Computer Programming Certificate</h2>
+				<div class="filter-buttons">
+					<button id="allBtn" class="active">All</button>
+					<button id="cseBtn">CSE</button>
+					<button id="wddBtn">WDD</button>
+				</div>
+				<div class="courses-container" id="coursesContainer">< !-- Course cards will be generated here --></div>
+				<p class="total-credits">
+					Total Credits:
+					<span id="totalCredits">0</span>
+				</p>
+			</section>
+		</main>
+		<footer>
+			<p>
+				&copy;
+				<span id="currentYear"></span>
+				|
+				<span>Sam Bonfanti</span>
+				| United States
+			</p>
+			<p id="lastModified"></p>
+		</footer>
+	</body>
+</html>
