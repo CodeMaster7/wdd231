@@ -46,7 +46,11 @@
 			<section class="location">
 				<h2>Arizona, United States</h2>
 				<div class="image-container">
-					<img src="images/arizona.webp" alt="Arizona Landscape" width="612" height="408">
+					<picture>
+						<source media="(min-width: 1024px)" srcset="images/arizona.webp">
+						<source media="(max-width: 768px)" srcset="images/arizona.webp">
+						<img src="images/arizona-mobile.webp" alt="Arizona Landscape" loading="lazy">
+					</picture>
 					<p>Arizona Landscape</p>
 				</div>
 			</section>
