@@ -67,6 +67,3 @@ const courses = [
 		completed: false // Not completed
 	}
 ]
-
-// Export the courses array to make it available to other scripts
-export { courses }
