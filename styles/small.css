@@ -10,7 +10,8 @@
     --accent-color: #aad4ef;
     --cse-color: #874a35;
     --wdd-color: #e6e6e6;
-    --completed-color: #5c8d89;
+    --completed-color: #3a6b66;
+    /* Darkened for better contrast */
     --text-light: white;
     --text-dark: #333;
     --border-color: #ddd;
@@ -168,7 +169,13 @@ section h2 {
 
 .location img {
     max-width: 100%;
+    width: 100%;
+    /* Add explicit width */
+    height: auto;
+    /* Maintain aspect ratio */
     border-radius: var(--border-radius);
+    aspect-ratio: 16 / 9;
+    /* Add explicit aspect ratio to prevent layout shift */
 }
 
 .location p {
@@ -267,7 +274,17 @@ section h2 {
 
 .course-card--wdd .course-card__status,
 .course-card--cse .course-card__status {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Increased opacity for better contrast */
+    color: #000;
+    /* Ensure text is dark for better contrast on light backgrounds */
+    font-weight: bold;
+    /* Make it bolder for better readability */
+}
+
+.course-card--completed .course-card__status {
+    color: #fff;
+    /* Ensure text is white for better contrast on dark backgrounds */
 }
 
 .total-credits {
