@@ -1,6 +1,3 @@
-// Import courses array from courses.js
-import { courses } from './courses.js'
-
 // Elements
 const hamburgerBtn = document.getElementById('hamburgerBtn')
 const primaryNav = document.getElementById('primaryNav')
