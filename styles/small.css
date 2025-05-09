@@ -180,8 +180,8 @@ section h2 {
     height: auto;
     /* Maintain aspect ratio */
     border-radius: var(--border-radius);
-    aspect-ratio: 16 / 9;
-    /* Add explicit aspect ratio to prevent layout shift */
+    aspect-ratio: 3 / 2;
+    /* Updated to match natural aspect ratio of 1.5 (612:408) */
 }
 
 .location p {
