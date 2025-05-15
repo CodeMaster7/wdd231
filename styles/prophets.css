@@ -1,0 +1,117 @@
+/*=======================
+=      CSS VARIABLES    =
+========================*/
+:root {
+    --primary-color: #5b2a86;
+    /* Purple theme - more vibrant and spiritual */
+    --secondary-color: #7785ac;
+    --card-background: #f9f1fd;
+    --card-border: #d3b5e5;
+    --text-color: #2d2b2e;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --border-radius: 4px;
+    --box-shadow: 0 3px 6px rgba(91, 42, 134, 0.2);
+}
+
+/*=======================
+=     GLOBAL STYLES     =
+========================*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: var(--spacing-medium);
+    color: var(--text-color);
+    background-color: #f5f5f5;
+}
+
+/*=======================
+=     HEADER STYLES     =
+========================*/
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/*=======================
+=      GRID LAYOUT      =
+========================*/
+#cards {
+    display: grid;
+    /* auto-fit with minmax creates responsive grid that adapts to screen size */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-large);
+    padding: 0;
+}
+
+/*=======================
+=      CARD STYLES      =
+========================*/
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-medium);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card__name {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: var(--spacing-small);
+    font-size: 1.5rem;
+}
+
+.card__birthdate,
+.card__birthplace {
+    margin: var(--spacing-small) 0;
+    font-size: 0.9rem;
+}
+
+.card__image {
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/*=======================
+=     FOOTER STYLES     =
+========================*/
+footer {
+    text-align: center;
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-medium);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+/*=======================
+=    MEDIA QUERIES      =
+========================*/
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
