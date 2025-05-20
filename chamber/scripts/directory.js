@@ -1,10 +1,10 @@
-// DOM elements
-const gridViewBtn = document.getElementById('grid-view-btn')
-const listViewBtn = document.getElementById('list-view-btn')
-const gridView = document.getElementById('grid-view')
-const listView = document.getElementById('list-view')
-
 document.addEventListener('DOMContentLoaded', () => {
+	// DOM elements
+	const gridViewBtn = document.getElementById('grid-view-btn')
+	const listViewBtn = document.getElementById('list-view-btn')
+	const gridView = document.getElementById('grid-view')
+	const listView = document.getElementById('list-view')
+
 	// Toggle between grid and list views
 	gridViewBtn.addEventListener('click', () => {
 		gridView.style.display = 'grid'
