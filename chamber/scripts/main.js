@@ -1,10 +1,10 @@
+const menuToggle = document.querySelector('.nav__toggle-menu')
+const navMenu = document.querySelector('.nav')
+const themeToggle = document.querySelector('.nav__toggle-theme')
+const logo = document.querySelector('.header__logo')
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
-	const menuToggle = document.querySelector('.nav__toggle-menu')
-	const navMenu = document.querySelector('.nav')
-	const themeToggle = document.querySelector('.nav__toggle-theme')
-	const logo = document.querySelector('.header__logo')
-
 	// Toggle mobile menu
 	menuToggle.addEventListener('click', function () {
 		navMenu.classList.toggle('active')
