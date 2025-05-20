@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			card.innerHTML = `
                 <div class="directory__card-img">
                     <img src="${member.image}" alt="${member.name} Logo"
-                         width="100" height="100"
-                         style="max-width: 100%; height: auto; object-fit: contain;"
-                         onerror="this.onerror=null; this.src='images/shared/placeholder.png';">
+                        width="100" height="100"
+                        style="max-width: 100%; height: auto; object-fit: contain;"
+                        onerror="this.onerror=null; this.src='images/shared/placeholder.png';">
                 </div>
                 <div class="directory__card-content">
                     <h3 class="directory__card-title">${member.name}</h3>
