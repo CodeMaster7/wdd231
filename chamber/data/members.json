@@ -14,7 +14,7 @@
             "address": "13954 W Waddell Rd, Surprise, AZ 85379",
             "phone": "(623) 555-8732",
             "website": "https://sunrisetechus.com",
-            "image": "images/Sunrise-Tech-logo.png",
+            "image": "images/Sunrise-Tech-logo.webp",
             "membershipLevel": "Platinum"
     }
 
@@ -24,7 +24,7 @@
             "address": "16959 W Bell Rd, Suite 202, Surprise, AZ 85374",
             "phone": "(623) 555-9134",
             "website": "https://canyonstateins.com",
-            "image": "images/canyon-state.png",
+            "image": "images/canyon-state.webp",
             "membershipLevel": "Silver"
     }
 
@@ -34,7 +34,7 @@
             "address": "15591 N Reems Rd, Surprise, AZ 85374",
             "phone": "(623) 555-2277",
             "website": "https://oasiscafesurprise.com",
-            "image": "images/oasis-cafe.png",
+            "image": "images/oasis-cafe.webp",
             "membershipLevel": "Bronze"
     }
 
@@ -44,7 +44,7 @@
             "address": "13401 W Grand Ave, Surprise, AZ 85374",
             "phone": "(623) 555-4488",
             "website": "https://westsideconstructionaz.com",
-            "image": "images/westside-construction.png",
+            "image": "images/westside-construction.webp",
             "membershipLevel": "Gold"
     }
 
@@ -54,7 +54,7 @@
             "address": "14418 W Meeker Blvd, Suite 100, Surprise, AZ 85379",
             "phone": "(623) 555-3663",
             "website": "https://surprisevalleydental.com",
-            "image": "images/surprise-valley.png",
+            "image": "images/surprise-valley.webp",
             "membershipLevel": "Silver"
     }
 
@@ -64,7 +64,7 @@
             "address": "13331 W Indian School Rd, Surprise, AZ 85379",
             "phone": "(623) 555-7722",
             "website": "https://azsolarpowersolutions.com",
-            "image": "images/az-solar.png",
+            "image": "images/az-solar.webp",
             "membershipLevel": "Platinum"
     }
 
