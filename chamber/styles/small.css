@@ -2,15 +2,10 @@
 :root {
     /* Colors */
     --primary-color: #f29e23;
-    /* Orange/Amber */
     --secondary-color: #1a1a1a;
-    /* Dark Gray/Almost Black */
     --background-color: #F5F5F5;
-    /* Light Gray */
     --text-color: #333333;
-    /* Dark Gray for text */
     --light-color: #ffffff;
-    /* White */
 
     /* Fonts */
     --font-family: 'DM Sans', sans-serif;
