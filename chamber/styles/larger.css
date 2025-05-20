@@ -1,0 +1,115 @@
+/* Media query for tablet and larger screens */
+@media (min-width: 640px) {
+
+    /* Header Styles */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .header__logo-container {
+        margin-bottom: 0;
+    }
+
+    .header__nav-container {
+        width: auto;
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        margin-left: 2rem;
+    }
+
+    .header__title h1 {
+        font-size: 2rem;
+    }
+
+    .header__title p {
+        font-size: 1rem;
+    }
+
+    /* Navigation */
+    .nav {
+        position: static;
+        display: block;
+        width: auto;
+        box-shadow: none;
+        margin-right: 1rem;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin-bottom: 0;
+        margin-left: 1.5rem;
+        border-bottom: none;
+    }
+
+    .nav__link {
+        border-bottom: none;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .nav__link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: width 0.3s;
+    }
+
+    .nav__link:hover::after,
+    .nav__link:focus::after {
+        width: 100%;
+    }
+
+    .nav__link:hover,
+    .nav__link:focus {
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+
+    /* Fix for dark mode hover */
+    .dark-theme .nav__link:hover,
+    .dark-theme .nav__link:focus {
+        color: var(--primary-color);
+        background-color: transparent;
+    }
+
+    /* Toggle buttons */
+    .nav__toggle-theme {
+        width: auto;
+        padding: 0.5rem;
+        margin-right: 0;
+    }
+
+    .nav__toggle-menu {
+        display: none;
+        /* Hide hamburger menu on desktop */
+    }
+
+    /* Main Content */
+    main {
+        padding: 2rem;
+    }
+}
+
+/* Media query for desktop screens */
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 4rem;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
