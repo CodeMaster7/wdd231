@@ -29,6 +29,7 @@
 		/>
 		<!-- JavaScript -->
 		<script src="scripts/main.js" defer></script>
+		<script src="scripts/directory.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -60,7 +61,21 @@
 				</div>
 			</div>
 		</header>
-		<main><h2 class="main__title">Business Directory</h2></main>
+		<main>
+			<h2 class="main__title">Business Directory</h2>
+			<div class="directory__view-controls">
+				<button id="grid-view-btn" class="view-btn view-btn--active" aria-label="Grid view">
+					<img src="images/grid-layout-button-light.svg" alt="Grid view" width="24" height="24" />
+				</button>
+				<button id="list-view-btn" class="view-btn" aria-label="List view">
+					<img src="images/table-layout-button-light.svg" alt="List view" width="24" height="24" />
+				</button>
+			</div>
+			<div id="directory-container">
+				<div id="grid-view" class="directory__grid"></div>
+				<div id="list-view" class="directory__list"></div>
+			</div>
+		</main>
 		<footer>Sam Bonfanti | Chamber of Commerce</footer>
 	</body>
 </html>
