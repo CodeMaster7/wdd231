@@ -236,6 +236,20 @@ footer {
     font-size: var(--footer-size);
 }
 
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: var(--footer-size);
+}
+
+.footer__content,
+.footer__copyright {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
 /* ========== DIRECTORY PAGE STYLES ========== */
 
 /* View Controls */
@@ -291,7 +305,8 @@ footer {
 
 /* Directory Container - Prevents layout shift */
 .directory__container {
-    min-height: 400px; /* Reserve space for content */
+    min-height: 400px;
+    /* Reserve space for content */
 }
 
 .directory__grid-card {
