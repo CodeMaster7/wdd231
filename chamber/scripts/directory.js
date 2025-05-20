@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-	// DOM elements
-	const gridViewBtn = document.getElementById('grid-view-btn')
-	const listViewBtn = document.getElementById('list-view-btn')
-	const gridView = document.getElementById('grid-view')
-	const listView = document.getElementById('list-view')
+// DOM elements
+const gridViewBtn = document.getElementById('grid-view-btn')
+const listViewBtn = document.getElementById('list-view-btn')
+const gridView = document.getElementById('grid-view')
+const listView = document.getElementById('list-view')
 
+document.addEventListener('DOMContentLoaded', () => {
 	// Toggle between grid and list views
 	gridViewBtn.addEventListener('click', () => {
 		gridView.style.display = 'grid'
@@ -43,7 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			card.className = 'directory__grid-card'
 			card.innerHTML = `
                 <div class="directory__card-img">
-                    <img src="${member.image}" alt="${member.name} Logo" onerror="this.onerror=null; this.src='images/shared/placeholder.png';">
+                    <img src="${member.image}" alt="${member.name} Logo"
+                         width="100" height="100"
+                         style="max-width: 100%; height: auto; object-fit: contain;"
+                         onerror="this.onerror=null; this.src='images/shared/placeholder.png';">
                 </div>
                 <div class="directory__card-content">
                     <h3 class="directory__card-title">${member.name}</h3>
