@@ -2,6 +2,8 @@ const menuToggle = document.querySelector('.nav__toggle-menu')
 const navMenu = document.querySelector('.nav')
 const themeToggle = document.querySelector('.nav__toggle-theme')
 const logo = document.querySelector('.header__logo')
+const gridViewIcon = document.querySelector('#grid-view-btn img')
+const listViewIcon = document.querySelector('#list-view-btn img')
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,13 +19,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		// Switch logo based on theme
 		if (document.body.classList.contains('dark-theme')) {
 			logo.src = 'images/shared/surprise-city-chamber-logo-dark.svg'
+			// Switch to dark icons for layout buttons
+			gridViewIcon.src = 'images/grid-layout-button-dark.svg'
+			listViewIcon.src = 'images/table-layout-button-dark.svg'
 		} else {
 			logo.src = 'images/shared/surprise-city-chamber-logo-light.svg'
+			// Switch to light icons for layout buttons
+			gridViewIcon.src = 'images/grid-layout-button-light.svg'
+			listViewIcon.src = 'images/table-layout-button-light.svg'
 		}
 	})
 
 	// Set initial logo based on system preference or saved preference
 	if (document.body.classList.contains('dark-theme')) {
 		logo.src = 'images/shared/surprise-city-chamber-logo-dark.svg'
+		// Set dark icons for layout buttons if in dark mode initially
+		if (gridViewIcon && listViewIcon) {
+			gridViewIcon.src = 'images/grid-layout-button-dark.svg'
+			listViewIcon.src = 'images/table-layout-button-dark.svg'
+		}
 	}
 })
