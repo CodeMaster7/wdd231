@@ -18,25 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Switch logo based on theme
 		if (document.body.classList.contains('dark-theme')) {
-			logo.src = 'images/shared/surprise-city-chamber-logo-dark.svg'
+			logo.src = 'images/shared/chamber-logo-dark.svg'
 			// Switch to dark icons for layout buttons
-			gridViewIcon.src = 'images/grid-layout-button-dark.svg'
-			listViewIcon.src = 'images/table-layout-button-dark.svg'
+			gridViewIcon.src = 'images/grid-button-dark.svg'
+			listViewIcon.src = 'images/table-button-dark.svg'
 		} else {
-			logo.src = 'images/shared/surprise-city-chamber-logo-light.svg'
+			logo.src = 'images/shared/chamber-logo-light.svg'
 			// Switch to light icons for layout buttons
-			gridViewIcon.src = 'images/grid-layout-button-light.svg'
-			listViewIcon.src = 'images/table-layout-button-light.svg'
+			gridViewIcon.src = 'images/grid-button-light.svg'
+			listViewIcon.src = 'images/table-button-light.svg'
 		}
 	})
 
 	// Set initial logo based on system preference or saved preference
 	if (document.body.classList.contains('dark-theme')) {
-		logo.src = 'images/shared/surprise-city-chamber-logo-dark.svg'
+		logo.src = 'images/shared/chamber-logo-dark.svg'
 		// Set dark icons for layout buttons if in dark mode initially
 		if (gridViewIcon && listViewIcon) {
-			gridViewIcon.src = 'images/grid-layout-button-dark.svg'
-			listViewIcon.src = 'images/table-layout-button-dark.svg'
+			gridViewIcon.src = 'images/grid-button-dark.svg'
+			listViewIcon.src = 'images/table-button-dark.svg'
 		}
 	}
 })
