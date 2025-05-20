@@ -1,0 +1,76 @@
+{
+	"members": [
+		{
+			"name": "Desert Bloom Florist",
+			"address": "15345 W Bell Rd, Surprise, AZ 85374",
+			"phone": "(623) 214-6545",
+			"website": "https://desertbloomflorist.com",
+			"image": "images/directory/desert-bloom.jpg",
+			"membershipLevel": "Gold"
+		},
+		{
+			"name": "Sunrise Technology Solutions",
+			"address": "13954 W Waddell Rd, Surprise, AZ 85379",
+			"phone": "(623) 555-8732",
+			"website": "https://sunrisetechus.com",
+			"image": "images/directory/sunrise-tech.jpg",
+			"membershipLevel": "Platinum"
+		},
+		{
+			"name": "Canyon State Insurance",
+			"address": "16959 W Bell Rd, Suite 202, Surprise, AZ 85374",
+			"phone": "(623) 555-9134",
+			"website": "https://canyonstateins.com",
+			"image": "images/directory/canyon-insurance.jpg",
+			"membershipLevel": "Silver"
+		},
+		{
+			"name": "Oasis Café & Bakery",
+			"address": "15591 N Reems Rd, Surprise, AZ 85374",
+			"phone": "(623) 555-2277",
+			"website": "https://oasiscafesurprise.com",
+			"image": "images/directory/oasis-cafe.jpg",
+			"membershipLevel": "Bronze"
+		},
+		{
+			"name": "Westside Construction Co.",
+			"address": "13401 W Grand Ave, Surprise, AZ 85374",
+			"phone": "(623) 555-4488",
+			"website": "https://westsideconstructionaz.com",
+			"image": "images/directory/westside-construction.jpg",
+			"membershipLevel": "Gold"
+		},
+		{
+			"name": "Surprise Valley Dental",
+			"address": "14418 W Meeker Blvd, Suite 100, Surprise, AZ 85379",
+			"phone": "(623) 555-3663",
+			"website": "https://surprisevalleydental.com",
+			"image": "images/directory/valley-dental.jpg",
+			"membershipLevel": "Silver"
+		},
+		{
+			"name": "AZ Solar Power Solutions",
+			"address": "13331 W Indian School Rd, Surprise, AZ 85379",
+			"phone": "(623) 555-7722",
+			"website": "https://azsolarpowersolutions.com",
+			"image": "images/directory/az-solar.jpg",
+			"membershipLevel": "Platinum"
+		},
+		{
+			"name": "Cactus Financial Advisors",
+			"address": "17041 N Dysart Rd, Surprise, AZ 85378",
+			"phone": "(623) 555-1199",
+			"website": "https://cactusfinancialadvisors.com",
+			"image": "images/directory/cactus-financial.jpg",
+			"membershipLevel": "Gold"
+		},
+		{
+			"name": "Desert Wind Realty",
+			"address": "15557 W Bell Rd, Suite 102, Surprise, AZ 85374",
+			"phone": "(623) 555-6090",
+			"website": "https://desertwindrealty.com",
+			"image": "images/directory/desert-wind.jpg",
+			"membershipLevel": "Silver"
+		}
+	]
+}
