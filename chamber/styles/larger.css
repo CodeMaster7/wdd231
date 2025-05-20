@@ -1,3 +1,9 @@
+/* ========== CHAMBER OF COMMERCE LARGER STYLES ==========
+   Author: Sam Bonfanti
+   Responsive styles for tablet and desktop screens
+   Applies to screens 640px and larger
+   ======================================== */
+
 /* Media query for tablet and larger screens */
 @media (min-width: 640px) {
 
@@ -100,6 +106,22 @@
     main {
         padding: 2rem;
     }
+
+    /* Directory Page Responsive Styles */
+    .directory__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .directory__list-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .directory__list-title {
+        flex: 0 0 22%;
+        margin-bottom: 0;
+    }
 }
 
 /* Media query for desktop screens */
@@ -111,5 +133,10 @@
     main {
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    /* Directory grid for larger screens */
+    .directory__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
