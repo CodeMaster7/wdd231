@@ -7,6 +7,19 @@ const listViewIcon = document.querySelector('#list-view-btn img')
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function () {
+	// Set current year
+	const currentYearElement = document.getElementById('current-year')
+	if (currentYearElement) {
+		currentYearElement.textContent = new Date().getFullYear()
+	}
+
+	// Set last modified date
+	const lastModifiedElement = document.getElementById('last-modified')
+	if (lastModifiedElement) {
+		// Simple format using document.lastModified directly
+		lastModifiedElement.textContent = document.lastModified
+	}
+
 	// Toggle mobile menu
 	menuToggle.addEventListener('click', function () {
 		navMenu.classList.toggle('active')
