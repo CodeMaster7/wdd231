@@ -55,7 +55,7 @@ function displayResults(data, type) {
 		const weatherIcon = document.querySelector('.weather__icon img')
 		if (weatherIcon) {
 			// Use local weather icon to avoid cross-site cookie issues
-			weatherIcon.src = 'images/weather_day_sandstorm_icon.svg'
+			weatherIcon.src = 'images/day_sandstorm_icon.svg'
 			weatherIcon.alt = data.weather[0].description
 		}
 
