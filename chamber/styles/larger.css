@@ -139,4 +139,40 @@
     .directory__grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Footer Responsive Styles */
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        padding: 0 2rem;
+        gap: 2rem;
+    }
+
+    .footer__contact {
+        text-align: left;
+        flex: 1;
+    }
+
+    .footer__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex: 1.5;
+        gap: 2rem;
+    }
+
+    .footer__social {
+        justify-content: center;
+        margin-bottom: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer__project-info {
+        align-items: flex-end;
+        text-align: right;
+    }
 }
