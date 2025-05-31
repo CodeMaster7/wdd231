@@ -4,7 +4,7 @@
 
 // API URLs
 const weatherUrl =
-	'https://api.openweathermap.org/data/2.5/weather?lat=33.6292&lon=-112.3679&appid=&units=imperial'
+	'https://api.openweathermap.org/data/2.5/weather?lat=33.6292&lon=-112.3679&appid=a7fce593ad6d2cb859c8583cff11ec93&units=imperial'
 const membersUrl = 'data/members.json'
 
 // Initialize when DOM loads
