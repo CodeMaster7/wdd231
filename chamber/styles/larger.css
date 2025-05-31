@@ -174,7 +174,7 @@
         max-width: 1200px;
     }
 
-    .hero__title {
+    h1.hero__title {
         font-size: 3.5rem;
         margin-bottom: 0;
         letter-spacing: -0.02em;
