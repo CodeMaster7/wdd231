@@ -7,7 +7,7 @@
 /* Desktop styles only - 1024px and larger */
 @media (min-width: 1024px) {
 
-    /* Header Styles */
+    /* ========== HEADER STYLES ========== */
     .header {
         flex-direction: row;
         justify-content: center;
@@ -34,7 +34,7 @@
         margin-left: 2rem;
     }
 
-    .header__title h1 {
+    .header__title h2 {
         font-size: 2rem;
     }
 
@@ -42,7 +42,7 @@
         font-size: 1rem;
     }
 
-    /* Navigation */
+    /* ========== NAVIGATION STYLES ========== */
     .nav {
         position: static;
         display: block;
@@ -107,15 +107,14 @@
 
     .nav__toggle-menu {
         display: none;
-        /* Hide hamburger menu on desktop */
     }
 
-    /* Main Content */
+    /* ========== MAIN CONTENT ========== */
     main {
         margin: 0 auto;
     }
 
-    /* Directory Page Responsive Styles */
+    /* ========== DIRECTORY PAGE STYLES ========== */
     .directory__grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -131,7 +130,7 @@
         margin-bottom: 0;
     }
 
-    /* Footer Responsive Styles */
+    /* ========== FOOTER STYLES ========== */
     .footer__container {
         flex-direction: row;
         justify-content: space-between;
@@ -166,7 +165,7 @@
         align-items: flex-end;
     }
 
-    /* ========== HOME PAGE DESKTOP STYLES ========== */
+    /* ========== HOME PAGE STYLES ========== */
 
     /* Hero Section */
     .hero__content {
@@ -190,7 +189,7 @@
         aspect-ratio: 4 / 2;
     }
 
-    /* Call to Action */
+    /* Call to Action Section */
     .cta {
         padding: 6rem;
     }
@@ -214,7 +213,7 @@
         font-size: 1.2rem;
     }
 
-    /* Events and Weather Container - Desktop */
+    /* Events and Weather Container */
     .events-weather {
         padding: 4rem 6rem;
     }
@@ -226,7 +225,6 @@
         align-items: start;
     }
 
-    /* Events Grid - Desktop */
     .events__grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -238,7 +236,7 @@
         gap: 2.5rem;
     }
 
-    /* Larger weather card on desktop */
+    /* Weather Section */
     .weather__current {
         gap: 2rem;
     }
@@ -252,7 +250,6 @@
         height: 80px;
     }
 
-    /* Weather styling adjustments for desktop */
     .weather__title {
         font-size: 2rem;
     }
