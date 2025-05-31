@@ -5,7 +5,7 @@
 			"address": "15345 W Bell Rd, Surprise, AZ 85374",
 			"phone": "(623) 214-6545",
 			"website": "https://desertbloomflorist.com",
-			"image": "images/images.jpeg",
+			"image": "images/desert-bloom.webp",
 			"membershipLevel": "Gold"
 		},
 
@@ -23,7 +23,7 @@
 			"address": "16959 W Bell Rd, Suite 202, Surprise, AZ 85374",
 			"phone": "(623) 555-9134",
 			"website": "https://canyonstateins.com",
-			"image": "images/canyon.png",
+			"image": "images/canyon-state.webp",
 			"membershipLevel": "Silver"
 		},
 
@@ -41,7 +41,7 @@
 			"address": "13401 W Grand Ave, Surprise, AZ 85374",
 			"phone": "(623) 555-4488",
 			"website": "https://westsideconstructionaz.com",
-			"image": "images/westside-construction.png",
+			"image": "images/westside-construction.webp",
 			"membershipLevel": "Gold"
 		},
 
@@ -50,7 +50,7 @@
 			"address": "14418 W Meeker Blvd, Suite 100, Surprise, AZ 85379",
 			"phone": "(623) 555-3663",
 			"website": "https://surprisevalleydental.com",
-			"image": "images/valley-dental.png",
+			"image": "images/valley-dental.webp",
 			"membershipLevel": "Silver"
 		},
 
@@ -59,7 +59,7 @@
 			"address": "13331 W Indian School Rd, Surprise, AZ 85379",
 			"phone": "(623) 555-7722",
 			"website": "https://azsolarpowersolutions.com",
-			"image": "images/sun-solar.png",
+			"image": "images/sun-solar.webp",
 			"membershipLevel": "Platinum"
 		},
 
@@ -68,7 +68,7 @@
 			"address": "17041 N Dysart Rd, Surprise, AZ 85378",
 			"phone": "(623) 555-1199",
 			"website": "https://cactusfinancialadvisors.com",
-			"image": "images/cactus-financial.png",
+			"image": "images/cactus-financial.webp",
 			"membershipLevel": "Gold"
 		},
 
@@ -77,7 +77,7 @@
 			"address": "15557 W Bell Rd, Suite 102, Surprise, AZ 85374",
 			"phone": "(623) 555-6090",
 			"website": "https://desertwindrealty.com",
-			"image": "images/desert-wind.jpg",
+			"image": "images/desert-wind.webp",
 			"membershipLevel": "Silver"
 		}
 	]
