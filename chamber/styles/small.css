@@ -57,7 +57,6 @@ h1 {
 
 h2 {
     font-size: var(--h2-size);
-    margin: 0.5rem 0;
 }
 
 h3 {
@@ -74,6 +73,21 @@ h3 {
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
     position: relative;
+}
+
+/* New mobile styles for header container */
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Header Navigation Container - remove positioning context */
+.header__nav-container {
+    display: flex;
+    align-items: center;
 }
 
 .dark-theme .header {
@@ -165,6 +179,7 @@ h3 {
     position: absolute;
     top: 100%;
     left: 0;
+    right: 0;
     background-color: var(--light-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
@@ -214,7 +229,7 @@ h3 {
 
 /* Main Content */
 main {
-    padding: 1rem;
+    padding: 0;
 }
 
 .main__title {
@@ -380,6 +395,11 @@ main {
 
 /* ========== DIRECTORY PAGE STYLES ========== */
 
+.directory__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* View Controls */
 .directory__view-controls {
     display: flex;
@@ -458,14 +478,13 @@ main {
 }
 
 .directory__card-img {
-    height: 120px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
     border-bottom: 1px solid #eee;
     /* Reserve space for images to prevent layout shifts */
-    min-height: 120px;
     position: relative;
     overflow: hidden;
 }
@@ -586,4 +605,586 @@ main {
 
 .dark-theme .directory__list-detail {
     color: #e0e0e0;
+}
+
+/* ========== HOME PAGE STYLES ========== */
+
+/* Hero Section */
+.hero {
+    background-color: var(--light-color);
+    margin-bottom: 0;
+}
+
+.dark-theme .hero {
+    background-color: var(--light-color);
+}
+
+.hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: var(--secondary-color);
+    letter-spacing: -0.01em;
+}
+
+.hero__title strong {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.dark-theme .hero__title,
+.dark-theme .hero__title strong {
+    color: var(--text-color);
+}
+
+/* Full Width Hero Image */
+.hero__image-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    max-height: 500px;
+    aspect-ratio: 16/9;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    filter: brightness(0.95) contrast(1.05);
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.dark-theme .cta {
+    background-color: var(--background-color);
+}
+
+.cta__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta__title {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.dark-theme .cta__title {
+    color: var(--text-color);
+}
+
+.cta__description {
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-size: 1.125rem;
+}
+
+.dark-theme .cta__description {
+    color: var(--text-color);
+}
+
+.cta__button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(242, 158, 35, 0.3);
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.cta__button:hover {
+    background-color: #e8901e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 158, 35, 0.4);
+}
+
+/* Events and Weather Container */
+.events-weather {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.events-weather__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Events Section - Updated for container layout */
+.events {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.events__container {
+    max-width: none;
+    margin: 0;
+}
+
+/* Weather Section - Updated for container layout */
+.weather {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Events Section Styling */
+.events__title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.dark-theme .events__title {
+    color: var(--text-color);
+}
+
+.events__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+/* Event Cards */
+.event-card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.dark-theme .event-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-card:hover,
+.event-card--hovered {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .event-card:hover,
+.dark-theme .event-card--hovered {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.event-card__date {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+    min-width: 60px;
+    height: fit-content;
+}
+
+.event-card__month {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.event-card__day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-card__content {
+    flex: 1;
+}
+
+.event-card__title {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.dark-theme .event-card__title {
+    color: var(--text-color);
+}
+
+.event-card__description {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.dark-theme .event-card__description {
+    color: #ccc;
+}
+
+.event-card__time,
+.event-card__location {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.dark-theme .event-card__time,
+.dark-theme .event-card__location {
+    color: #999;
+}
+
+.event-card__time::before {
+    content: '🕒 ';
+}
+
+.event-card__location::before {
+    content: '📍 ';
+}
+
+/* Weather Section Styling */
+.weather__container {
+    max-width: none;
+    margin: 0;
+}
+
+.weather__title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.dark-theme .weather__title {
+    color: var(--text-color);
+}
+
+.weather__card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .weather__card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.weather__current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.weather__icon img {
+    width: 64px;
+    height: 64px;
+}
+
+.weather__current-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: block;
+}
+
+.dark-theme .weather__current-temp {
+    color: var(--text-color);
+}
+
+.weather__description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    display: block;
+}
+
+.dark-theme .weather__description {
+    color: #ccc;
+}
+
+.weather__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.weather__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: rgba(242, 158, 35, 0.1);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+}
+
+.weather__label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+}
+
+.dark-theme .weather__label {
+    color: var(--text-color);
+}
+
+.weather__value {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.weather__forecast {
+    border-top: 2px solid #eee;
+    padding-top: 1rem;
+}
+
+.dark-theme .weather__forecast {
+    border-color: #333;
+}
+
+.weather__forecast-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.dark-theme .weather__forecast-title {
+    color: var(--text-color);
+}
+
+.weather__forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .forecast-day {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.forecast-day__name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.dark-theme .forecast-day__name {
+    color: var(--text-color);
+}
+
+.forecast-day img {
+    margin: 0;
+}
+
+.forecast-day__temp {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.weather__timestamp {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.dark-theme .weather__timestamp {
+    color: #999;
+}
+
+/* Spotlights Section */
+.spotlights {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.spotlights__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlights__title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.dark-theme .spotlights__title {
+    color: var(--text-color);
+}
+
+.spotlights__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+/* Spotlight Cards */
+.spotlight-card {
+    background-color: var(--light-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.dark-theme .spotlight-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.spotlight-card:hover,
+.spotlight-card--hovered {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .spotlight-card:hover,
+.dark-theme .spotlight-card--hovered {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.spotlight-card__image {
+    height: 200px;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.spotlight-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.spotlight-card__content {
+    padding: 1.5rem;
+}
+
+.spotlight-card__title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.dark-theme .spotlight-card__title {
+    color: var(--text-color);
+}
+
+.spotlight-card__membership {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spotlight-card__description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.dark-theme .spotlight-card__description {
+    color: #ccc;
+}
+
+.spotlight-card__contact {
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-card__phone,
+.spotlight-card__email,
+.spotlight-card__address {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.dark-theme .spotlight-card__phone,
+.dark-theme .spotlight-card__email,
+.dark-theme .spotlight-card__address {
+    color: #ccc;
+}
+
+.spotlight-card__phone::before {
+    content: '📞 ';
+}
+
+.spotlight-card__email::before {
+    content: '✉️ ';
+}
+
+.spotlight-card__address::before {
+    content: '📍 ';
+}
+
+.spotlight-card__website {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(242, 158, 35, 0.3);
+}
+
+.spotlight-card__website:hover {
+    background-color: #e8901e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(242, 158, 35, 0.4);
 }
