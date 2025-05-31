@@ -228,26 +228,154 @@ main {
 }
 
 /* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    padding: 1rem;
-    text-align: center;
-    font-size: var(--footer-size);
-}
-
 .footer {
     background-color: var(--secondary-color);
     color: var(--light-color);
     padding: 1.5rem 1rem;
-    text-align: center;
     font-size: var(--footer-size);
+    line-height: 1.4;
 }
 
-.footer__content,
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.footer__contact {
+    text-align: center;
+}
+
+.footer__business-name {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.footer__address {
+    font-style: normal;
+}
+
+.footer__address p {
+    margin: 0.25rem 0;
+}
+
+.footer__address a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__address a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Project Info Section */
+.footer__info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Social Media Links */
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.footer__social-link img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+/* Project Information */
+.footer__project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer__project-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.footer__student-name {
+    font-weight: 500;
+    margin: 0;
+}
+
 .footer__copyright {
-    margin: 0.5rem 0;
-    line-height: 1.4;
+    margin: 0.5rem 0 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+.footer__last-modified {
+    font-size: 0.75rem;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Dark Mode Footer Styles */
+.dark-theme .footer {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+.dark-theme .footer__business-name {
+    color: #f29e23;
+}
+
+.dark-theme .footer__address {
+    color: #f5f5f5;
+}
+
+.dark-theme .footer__address a {
+    color: #f5f5f5;
+}
+
+.dark-theme .footer__address a:hover {
+    color: #f29e23;
+}
+
+.dark-theme .footer__project-title {
+    color: #f29e23;
+}
+
+.dark-theme .footer__student-name {
+    color: #f5f5f5;
+}
+
+.dark-theme .footer__copyright {
+    color: #f5f5f5;
+}
+
+.dark-theme .footer__last-modified {
+    color: #ccc;
 }
 
 /* ========== DIRECTORY PAGE STYLES ========== */
