@@ -51,11 +51,11 @@ function displayResults(data, type) {
 			description.textContent = data.weather[0].description
 		}
 
-		// Update weather icon
+		// Update weather icon - use local icon instead of external OpenWeatherMap
 		const weatherIcon = document.querySelector('.weather__icon img')
 		if (weatherIcon) {
-			const iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
-			weatherIcon.src = iconUrl
+			// Use local weather icon to avoid cross-site cookie issues
+			weatherIcon.src = 'images/weather_day_sandstorm_icon.svg'
 			weatherIcon.alt = data.weather[0].description
 		}
 
