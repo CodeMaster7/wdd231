@@ -186,7 +186,8 @@
     }
 
     .hero__image {
-        object-fit: fill;
+        object-fit: cover;
+        aspect-ratio: 4 / 2;
     }
 
     /* Call to Action */
