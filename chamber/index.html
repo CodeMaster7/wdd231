@@ -1,68 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>WDD 231 - Chamber of Commerce - Sam Bonfanti</title>
-		<meta name="description" content="Directory of businesses in the area. Find a business to support!">
-		<meta name="author" content="Sam Bonfanti">
+		<meta
+			name="description"
+			content="Welcome to Surprise Chamber of Commerce. Supporting local businesses with networking, events, and community resources. Join today!"
+		/>
+		<meta name="author" content="Sam Bonfanti" />
 		<!-- Open Graph meta information -->
-		<meta property="og:title" content="WDD 231 - Chamber of Commerce - Sam Bonfanti">
-		<meta property="og:description" content="Directory of businesses in the area. Find a business to support!">
-		<meta property="og:image" content="https://codemaster7.github.io/wdd231/chamber/images/shared/surprise-city-chamber-logo-light.svg">
-		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/">
+		<meta property="og:title" content="WDD 231 - Chamber of Commerce - Sam Bonfanti" />
+		<meta
+			property="og:description"
+			content="Welcome to Surprise Chamber of Commerce. Supporting local businesses with networking, events, and community resources. Join today!"
+		/>
+		<meta
+			property="og:image"
+			content="https://codemaster7.github.io/wdd231/chamber/images/shared/surprise-city-chamber-logo-light.svg"
+		/>
+		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/" />
 		<!-- favicon -->
-		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="favicon.ico" />
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/small.css">
-		<link rel="stylesheet" href="styles/larger.css">
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/small.css" />
+		<link rel="stylesheet" href="styles/larger.css" />
 		<!-- JavaScript -->
 		<script src="scripts/main.js" defer></script>
-		<script src="scripts/directory.js" defer></script>
+		<script src="scripts/home.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__logo-container">
-				<img
-					src="images/shared/chamber-logo-light.svg"
-					alt="Surprise Chamber of Commerce Logo"
-					class="header__logo"
-					width="100"
-					height="100"
-				>
-				<div class="header__title">
-					<h2>Surprise</h2>
-					<p>Chamber of Commerce</p>
+			<div class="header__container">
+				<div class="header__logo-container">
+					<img
+						src="images/shared/chamber-logo-light.svg"
+						alt="Surprise Chamber of Commerce Logo"
+						class="header__logo"
+						width="100"
+						height="100"
+					/>
+					<div class="header__title">
+						<h2>Surprise</h2>
+						<p>Chamber of Commerce</p>
+					</div>
 				</div>
-			</div>
-			<div class="header__nav-container">
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
-						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
-						<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
-					</ul>
-				</nav>
-				<div class="header__controls">
-					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
-						<span class="theme-icon"></span>
-					</button>
-					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+				<div class="header__nav-container">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="index.html" class="nav__link">Home</a>
+							</li>
+							<li class="nav__item">
+								<a href="directory.html" class="nav__link">Directory</a>
+							</li>
+							<li class="nav__item">
+								<a href="join.html" class="nav__link">Join</a>
+							</li>
+							<li class="nav__item">
+								<a href="discover.html" class="nav__link">Discover</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+							<span class="theme-icon"></span>
+						</button>
+						<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+					</div>
 				</div>
 			</div>
 		</header>
-		<main>
-			
+		<main class="main">
+			<!-- Hero Section -->
+			<section class="hero">
+				<div class="hero__content">
+					<h1 class="hero__title">
+						Capital City by Name.
+						<strong>Statewide</strong>
+						by Mission.
+					</h1>
+				</div>
+				<!-- Full Width Hero Image -->
+				<div class="hero__image-section">
+					<img
+						src="images/hero.webp"
+						alt="Beautiful view of Surprise, Arizona cityscape and business district"
+						class="hero__image"
+						width="1200"
+						height="600"
+					/>
+				</div>
+			</section>
+			<!-- Membership Call to Action Section -->
+			<section class="cta">
+				<div class="cta__container">
+					<h2 class="cta__title">Connect with Local Leaders</h2>
+					<p class="cta__description">
+						As a member of the Surprise Chamber, you have access to benefits to improve your business and
+						help build a better Arizona. Joining the Chamber is an investment in your success and connection
+						to leaders who shape our community.
+					</p>
+					<a href="join.html" class="cta__button">Join the Surprise Chamber</a>
+				</div>
+			</section>
+			<!-- Events and Weather Container -->
+			<section class="events-weather">
+				<div class="events-weather__container">
+					<!-- Current Events Section -->
+					<div class="events">
+						<div class="events__container">
+							<h2 class="events__title">Current Events</h2>
+							<div class="events__grid">
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Dec</span>
+										<span class="event-card__day">15</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Holiday Business Mixer</h3>
+										<p class="event-card__description">
+											Join us for networking, refreshments, and holiday celebration with fellow
+											business owners.
+										</p>
+										<p class="event-card__time">6:00 PM - 8:00 PM</p>
+										<p class="event-card__location">Surprise Community Center</p>
+									</div>
+								</article>
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Jan</span>
+										<span class="event-card__day">08</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Business Growth Workshop</h3>
+										<p class="event-card__description">
+											Learn strategies for scaling your business and accessing local resources.
+										</p>
+										<p class="event-card__time">9:00 AM - 12:00 PM</p>
+										<p class="event-card__location">Chamber Conference Room</p>
+									</div>
+								</article>
+								<article class="event-card">
+									<div class="event-card__date">
+										<span class="event-card__month">Jan</span>
+										<span class="event-card__day">22</span>
+									</div>
+									<div class="event-card__content">
+										<h3 class="event-card__title">Monthly Breakfast Meeting</h3>
+										<p class="event-card__description">
+											Monthly gathering to discuss community issues and upcoming initiatives.
+										</p>
+										<p class="event-card__time">7:30 AM - 9:00 AM</p>
+										<p class="event-card__location">Denny's Restaurant</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<!-- Weather Section -->
+					<div class="weather">
+						<div class="weather__container">
+							<h2 class="weather__title">Current Weather</h2>
+							<div class="weather__card">
+								<div class="weather__current">
+									<div class="weather__icon">
+										<img
+											src="images/weather_day_sandstorm_icon.svg"
+											alt="Sunny weather"
+											width="64"
+											height="64"
+										/>
+									</div>
+									<div class="weather__temp">
+										<span class="weather__current-temp">75°F</span>
+										<span class="weather__description">Sunny</span>
+									</div>
+								</div>
+								<div class="weather__details">
+									<div class="weather__detail">
+										<span class="weather__label">High/Low:</span>
+										<span class="weather__value">82°F / 68°F</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Humidity:</span>
+										<span class="weather__value">45%</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Sunrise:</span>
+										<span class="weather__value">6:25 AM</span>
+									</div>
+									<div class="weather__detail">
+										<span class="weather__label">Sunset:</span>
+										<span class="weather__value">7:42 PM</span>
+									</div>
+								</div>
+								<div class="weather__forecast">
+									<h3 class="weather__forecast-title">3-Day Forecast</h3>
+									<div class="weather__forecast-grid">
+										<div class="forecast-day">
+											<span class="forecast-day__name">Today</span>
+											<img
+												src="images/weather_day_sandstorm_icon.svg"
+												alt="Sunny"
+												width="32"
+												height="32"
+											/>
+											<span class="forecast-day__temp">82°F</span>
+										</div>
+										<div class="forecast-day">
+											<span class="forecast-day__name">Tomorrow</span>
+											<img
+												src="images/weather_day_sandstorm_icon.svg"
+												alt="Partly Cloudy"
+												width="32"
+												height="32"
+											/>
+											<span class="forecast-day__temp">79°F</span>
+										</div>
+										<div class="forecast-day">
+											<span class="forecast-day__name">Thursday</span>
+											<img
+												src="images/weather_day_sandstorm_icon.svg"
+												alt="Cloudy"
+												width="32"
+												height="32"
+											/>
+											<span class="forecast-day__temp">76°F</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Company Spotlights Section -->
+			<section class="spotlights">
+				<div class="spotlights__container">
+					<h2 class="spotlights__title">Member Spotlights</h2>
+					<div class="spotlights__grid">
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img
+									src="images/images.jpeg"
+									alt="Desert Bloom Nursery storefront"
+									width="300"
+									height="200"
+								/>
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Desert Bloom Nursery</h3>
+								<p class="spotlight-card__description">
+									Your premier destination for desert landscaping and native plants. Serving Surprise
+									for over 15 years.
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(623) 555-GROW</p>
+									<p class="spotlight-card__email">info@desertbloom.com</p>
+									<p class="spotlight-card__address">456 Cactus Lane, Surprise, AZ</p>
+								</div>
+								<a href="https://desertbloom.com" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img
+									src="images/Sunrise-technology.webp"
+									alt="Sunrise Auto Repair shop"
+									width="300"
+									height="200"
+								/>
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Sunrise Auto Repair</h3>
+								<p class="spotlight-card__description">
+									Honest, reliable auto repair services. Family-owned and operated with certified ASE
+									technicians.
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(623) 555-AUTO</p>
+									<p class="spotlight-card__email">service@sunriseauto.com</p>
+									<p class="spotlight-card__address">789 Mechanic St, Surprise, AZ</p>
+								</div>
+								<a href="https://sunriseauto.com" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+						<article class="spotlight-card">
+							<div class="spotlight-card__image">
+								<img
+									src="images/oasis-cafe.webp"
+									alt="Oasis Cafe & Bakery"
+									width="300"
+									height="200"
+								/>
+							</div>
+							<div class="spotlight-card__content">
+								<h3 class="spotlight-card__title">Oasis Cafe & Bakery</h3>
+								<p class="spotlight-card__description">
+									Family-owned bakery offering fresh pastries, sandwiches, and coffee. Serving Surprise
+									for over 20 years.
+								</p>
+								<div class="spotlight-card__contact">
+									<p class="spotlight-card__phone">(623) 555-CAKE</p>
+									<p class="spotlight-card__email">hello@oasis.com</p>
+									<p class="spotlight-card__address">321 Main St, Surprise, AZ</p>
+								</div>
+								<a href="https://oasis.com" class="spotlight-card__website">Visit Website</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<p class="footer__content">Sam Bonfanti | Chamber of Commerce</p>
-			<p class="footer__copyright">
-				&copy;
-				<span id="current-year"></span>
-				| Surprise Chamber of Commerce
-			</p>
+			<div class="footer__container">
+				<!-- Left column: Contact information -->
+				<div class="footer__contact">
+					<h3 class="footer__business-name">Surprise Chamber of Commerce</h3>
+					<address class="footer__address">
+						<p>123 Grand Avenue</p>
+						<p>Surprise, Arizona 85374</p>
+						<p>info@surprisecc.org</p>
+						<p class="footer__phone">(623) 555-1234</p>
+					</address>
+				</div>
+				<!-- Right column: Social media and project info -->
+				<div class="footer__info">
+					<div class="footer__social">
+						<a href="#" class="footer__social-link" aria-label="Facebook">
+							<img src="images/shared/facebook.svg" alt="Facebook" width="32" height="32" />
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Instagram">
+							<img src="images/shared/instagram.svg" alt="Instagram" width="32" height="32" />
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Twitter">
+							<img src="images/shared/twitter.svg" alt="Twitter" width="32" height="32" />
+						</a>
+					</div>
+					<div class="footer__project-info">
+						<p class="footer__project-title">WDD231 Class Project</p>
+						<p class="footer__student-name">Sam Bonfanti</p>
+						<p class="footer__copyright">
+							&copy;
+							<span id="current-year"></span>
+							Surprise Chamber of Commerce
+						</p>
+						<p class="footer__last-modified">
+							Last Modification:
+							<span id="last-modified"></span>
+						</p>
+					</div>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
