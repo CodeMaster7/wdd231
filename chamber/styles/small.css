@@ -79,6 +79,16 @@ h1 {
     margin: 0;
 }
 
+/* Specific fix for hero title h1 inside section - more specific selector */
+section.hero .hero__title {
+    font-size: 2rem; /* Explicit font-size to prevent browser deprecation warning */
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: var(--secondary-color);
+    letter-spacing: -0.01em;
+}
+
 h2 {
     font-size: var(--h2-size);
 }
@@ -648,15 +658,6 @@ main {
     margin: 0 auto;
     padding: 4rem 2rem 3rem;
     text-align: center;
-}
-
-.hero__title {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 0;
-    color: var(--secondary-color);
-    letter-spacing: -0.01em;
 }
 
 .hero__title strong {
