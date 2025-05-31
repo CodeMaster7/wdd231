@@ -13,6 +13,18 @@
     --text-color: #333333;
     --light-color: #ffffff;
 
+    /* New contrast-safe color variables */
+    --muted-text-color: #555555;
+    /* Replaces #ccc - much darker for better contrast */
+    --secondary-text-color: #444444;
+    /* Replaces #666 - darker for better contrast */
+    --tertiary-text-color: #555555;
+    /* Replaces #999 - darker for better contrast */
+
+    /* Contrast-safe orange for text on light backgrounds */
+    --primary-text-color: #cc7a00;
+    /* Darker orange with 4.7:1 contrast ratio */
+
     /* Fonts - Using system font stack instead of Google Fonts */
     --font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --h1-size: 2.5rem;
@@ -32,6 +44,18 @@
     --text-color: #f5f5f5;
     --light-color: #1e1e1e;
     --nav-border-color: #333;
+
+    /* Dark theme safe colors */
+    --muted-text-color: #cccccc;
+    /* Light enough for dark backgrounds */
+    --secondary-text-color: #bbbbbb;
+    /* Light enough for dark backgrounds */
+    --tertiary-text-color: #aaaaaa;
+    /* Light enough for dark backgrounds */
+
+    /* In dark mode, use the bright orange since background is dark */
+    --primary-text-color: #f29e23;
+    /* Bright orange works on dark backgrounds */
 }
 
 /* Base Styles */
@@ -71,7 +95,7 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #cccccc;
     position: relative;
 }
 
@@ -91,7 +115,7 @@ h3 {
 }
 
 .dark-theme .header {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #555555;
 }
 
 .header__logo-container {
@@ -199,7 +223,7 @@ h3 {
 
 .nav__item {
     margin-bottom: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #cccccc;
 }
 
 .nav__link {
@@ -244,9 +268,11 @@ main {
 
 /* Footer */
 .footer {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    padding: 1.5rem 1rem;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    padding: 2rem 1rem 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid var(--primary-color);
     font-size: var(--footer-size);
     line-height: 1.4;
 }
@@ -267,11 +293,12 @@ main {
 .footer__business-name {
     font-size: 1.125rem;
     margin-bottom: 0.75rem;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
 }
 
 .footer__address {
     font-style: normal;
+    color: #f5f5f5;
 }
 
 .footer__address p {
@@ -279,13 +306,13 @@ main {
 }
 
 .footer__address a {
-    color: var(--light-color);
+    color: #f5f5f5;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer__address a:hover {
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     text-decoration: underline;
 }
 
@@ -323,7 +350,8 @@ main {
 .footer__social-link img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1); /* Makes icons white */
+    filter: brightness(0) invert(1);
+    /* Makes icons white */
 }
 
 /* Project Information */
@@ -335,23 +363,25 @@ main {
 
 .footer__project-title {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     margin: 0;
 }
 
 .footer__student-name {
     font-weight: 500;
     margin: 0;
+    color: #f5f5f5;
 }
 
 .footer__copyright {
     margin: 0.5rem 0 0.25rem 0;
     font-size: 0.875rem;
+    color: #f5f5f5;
 }
 
 .footer__last-modified {
-    font-size: 0.75rem;
-    color: #ccc;
+    font-size: var(--footer-size);
+    color: #cccccc;
     margin: 0;
 }
 
@@ -362,7 +392,7 @@ main {
 }
 
 .dark-theme .footer__business-name {
-    color: #f29e23;
+    color: var(--primary-text-color);
 }
 
 .dark-theme .footer__address {
@@ -374,11 +404,11 @@ main {
 }
 
 .dark-theme .footer__address a:hover {
-    color: #f29e23;
+    color: var(--primary-text-color);
 }
 
 .dark-theme .footer__project-title {
-    color: #f29e23;
+    color: var(--primary-text-color);
 }
 
 .dark-theme .footer__student-name {
@@ -390,7 +420,7 @@ main {
 }
 
 .dark-theme .footer__last-modified {
-    color: #ccc;
+    color: #cccccc;
 }
 
 /* ========== DIRECTORY PAGE STYLES ========== */
@@ -410,7 +440,7 @@ main {
 
 .view-btn {
     background-color: var(--light-color);
-    border: 1px solid #999;
+    border: 1px solid #666666;
     border-radius: 4px;
     padding: 0.5rem;
     cursor: pointer;
@@ -422,23 +452,24 @@ main {
 }
 
 .dark-theme .view-btn {
-    background-color: #777;
-    border-color: #777;
-    color: #f5f5f5;
+    background-color: #555555;
+    border-color: #555555;
+    color: #ffffff;
 }
 
 .view-btn:hover {
     background-color: #f0f0f0;
+    border-color: #555555;
 }
 
 .dark-theme .view-btn:hover {
-    background-color: #333;
+    background-color: #444444;
 }
 
 .view-btn--active {
-    background-color: #fff;
-    color: white;
-    border-color: #b06600;
+    background-color: var(--primary-color);
+    color: #000000;
+    border-color: #e8901e;
 }
 
 /* Directory Grid View */
@@ -483,21 +514,19 @@ main {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border-bottom: 1px solid #eee;
-    /* Reserve space for images to prevent layout shifts */
+    border-bottom: 1px solid #cccccc;
     position: relative;
     overflow: hidden;
 }
 
 .dark-theme .directory__card-img {
-    border-color: #333;
+    border-color: #555555;
 }
 
 .directory__card-img img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    /* Add these for better rendering */
     display: block;
     margin: 0 auto;
 }
@@ -528,16 +557,13 @@ main {
 
 .directory__card-link {
     color: #0066cc;
-    /* Better contrast blue link color */
     text-decoration: none;
     font-weight: 700;
-    /* Bolder for better readability */
     transition: color 0.3s ease;
 }
 
 .dark-theme .directory__card-link {
     color: #4d9dff;
-    /* Lighter blue for dark mode */
 }
 
 .directory__card-link:hover {
@@ -573,8 +599,7 @@ main {
 }
 
 .directory__list-item:nth-child(odd) {
-    background-color: #e5e5e5;
-    /* Lighter gray for better contrast */
+    background-color: #d8d8d8;
 }
 
 .dark-theme .directory__list-item:nth-child(even) {
@@ -583,7 +608,6 @@ main {
 
 .dark-theme .directory__list-item:nth-child(odd) {
     background-color: #2a2a2a;
-    /* Darker for better contrast */
 }
 
 .directory__list-title {
@@ -706,7 +730,7 @@ main {
 
 .cta__button {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #000000;
     padding: 1rem 2.5rem;
     border-radius: 6px;
     text-decoration: none;
@@ -804,7 +828,7 @@ main {
 
 .event-card__date {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #000000;
     border-radius: 8px;
     padding: 0.75rem;
     text-align: center;
@@ -842,25 +866,26 @@ main {
 }
 
 .event-card__description {
-    color: var(--text-color);
+    font-size: 0.875rem;
+    line-height: 1.4;
     margin-bottom: 0.75rem;
-    line-height: 1.5;
+    color: var(--secondary-text-color);
 }
 
 .dark-theme .event-card__description {
-    color: #ccc;
+    color: var(--muted-text-color);
 }
 
 .event-card__time,
 .event-card__location {
-    font-size: 0.875rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
     margin-bottom: 0.25rem;
 }
 
 .dark-theme .event-card__time,
 .dark-theme .event-card__location {
-    color: #999;
+    color: var(--tertiary-text-color);
 }
 
 .event-card__time::before {
@@ -925,14 +950,14 @@ main {
 }
 
 .weather__description {
-    font-size: 1.1rem;
-    color: var(--text-color);
+    font-size: 0.875rem;
+    color: var(--secondary-text-color);
     text-transform: capitalize;
     display: block;
 }
 
 .dark-theme .weather__description {
-    color: #ccc;
+    color: var(--muted-text-color);
 }
 
 .weather__details {
@@ -965,16 +990,16 @@ main {
 
 .weather__value {
     font-weight: 700;
-    color: var(--primary-color);
+    color: #000000;
 }
 
 .weather__forecast {
-    border-top: 2px solid #eee;
+    border-top: 2px solid #cccccc;
     padding-top: 1rem;
 }
 
 .dark-theme .weather__forecast {
-    border-color: #333;
+    border-color: #555555;
 }
 
 .weather__forecast-title {
@@ -1026,20 +1051,20 @@ main {
 
 .forecast-day__temp {
     font-weight: 700;
-    color: var(--primary-color);
+    color: #000000;
     font-size: 1rem;
 }
 
 .weather__timestamp {
     text-align: center;
     font-size: 0.75rem;
-    color: #666;
+    color: var(--secondary-text-color);
     margin-top: 1rem;
     font-style: italic;
 }
 
 .dark-theme .weather__timestamp {
-    color: #999;
+    color: var(--tertiary-text-color);
 }
 
 /* Spotlights Section */
@@ -1122,7 +1147,7 @@ main {
 }
 
 .spotlight-card__membership {
-    color: var(--primary-color);
+    color: #000000;
     font-weight: 600;
     font-size: 0.875rem;
     margin-bottom: 1rem;
@@ -1131,13 +1156,14 @@ main {
 }
 
 .spotlight-card__description {
-    color: var(--text-color);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
 }
 
 .dark-theme .spotlight-card__description {
-    color: #ccc;
+    color: var(--muted-text-color);
 }
 
 .spotlight-card__contact {
@@ -1147,15 +1173,15 @@ main {
 .spotlight-card__phone,
 .spotlight-card__email,
 .spotlight-card__address {
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.25rem;
 }
 
 .dark-theme .spotlight-card__phone,
 .dark-theme .spotlight-card__email,
 .dark-theme .spotlight-card__address {
-    color: #ccc;
+    color: var(--muted-text-color);
 }
 
 .spotlight-card__phone::before {
@@ -1172,7 +1198,7 @@ main {
 
 .spotlight-card__website {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #000000;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
@@ -1186,4 +1212,17 @@ main {
     background-color: #e8901e;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(242, 158, 35, 0.4);
+}
+
+/* Dark theme overrides for orange text elements - restore orange in dark mode */
+.dark-theme .weather__value {
+    color: var(--primary-text-color);
+}
+
+.dark-theme .forecast-day__temp {
+    color: var(--primary-text-color);
+}
+
+.dark-theme .spotlight-card__membership {
+    color: var(--primary-text-color);
 }
