@@ -1,17 +1,25 @@
 /* ========== CHAMBER OF COMMERCE LARGER STYLES ==========
    Author: Sam Bonfanti
-   Responsive styles for tablet and desktop screens
-   Applies to screens 640px and larger
+   Desktop-only responsive styles
+   Applies to screens 1024px and larger only
    ======================================== */
 
-/* Media query for tablet and larger screens */
-@media (min-width: 640px) {
+/* Desktop styles only - 1024px and larger */
+@media (min-width: 1024px) {
 
     /* Header Styles */
     .header {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding: 1rem 2rem;
+    }
+
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
     }
 
     .header__logo-container {
@@ -104,12 +112,12 @@
 
     /* Main Content */
     main {
-        padding: 2rem;
+        margin: 0 auto;
     }
 
     /* Directory Page Responsive Styles */
     .directory__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .directory__list-item {
@@ -121,23 +129,6 @@
     .directory__list-title {
         flex: 0 0 22%;
         margin-bottom: 0;
-    }
-}
-
-/* Media query for desktop screens */
-@media (min-width: 1024px) {
-    .header {
-        padding: 1rem 4rem;
-    }
-
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    /* Directory grid for larger screens */
-    .directory__grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     /* Footer Responsive Styles */
@@ -173,6 +164,103 @@
 
     .footer__project-info {
         align-items: flex-end;
-        text-align: right;
+    }
+
+    /* ========== HOME PAGE DESKTOP STYLES ========== */
+
+    /* Hero Section */
+    .hero__content {
+        padding: 6rem 4rem 3rem;
+        max-width: 1200px;
+    }
+
+    .hero__title {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        letter-spacing: -0.02em;
+    }
+
+    /* Hero Image - Desktop */
+    .hero__image-section {
+        max-height: 800px;
+    }
+
+    .hero__image {
+        object-fit: fill;
+    }
+
+    /* Call to Action */
+    .cta {
+        padding: 6rem;
+    }
+
+    .cta__container {
+        max-width: 1000px;
+    }
+
+    .cta__title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta__description {
+        font-size: 1.375rem;
+        margin-bottom: 3rem;
+    }
+
+    .cta__button {
+        padding: 1.25rem 3rem;
+        font-size: 1.2rem;
+    }
+
+    /* Events and Weather Container - Desktop */
+    .events-weather {
+        padding: 4rem 6rem;
+    }
+
+    .events-weather__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    /* Events Grid - Desktop */
+    .events__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Spotlights grid - 3 columns on desktop */
+    .spotlights__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    /* Larger weather card on desktop */
+    .weather__current {
+        gap: 2rem;
+    }
+
+    .weather__current-temp {
+        font-size: 3rem;
+    }
+
+    .weather__icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Weather styling adjustments for desktop */
+    .weather__title {
+        font-size: 2rem;
+    }
+
+    .weather__card {
+        width: max-content;
+    }
+
+    .weather__details {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
