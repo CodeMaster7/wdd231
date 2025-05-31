@@ -9,23 +9,22 @@
     /* Colors */
     --primary-color: #f29e23;
     --secondary-color: #1a1a1a;
-    --background-color: #F5F5F5;
+    --background-color: #f5f5f5;
     --text-color: #333333;
     --light-color: #ffffff;
 
-    /* New contrast-safe color variables */
+    /* Contrast-safe color variables */
     --muted-text-color: #555555;
-    /* Replaces #ccc - much darker for better contrast */
     --secondary-text-color: #444444;
-    /* Replaces #666 - darker for better contrast */
     --tertiary-text-color: #555555;
-    /* Replaces #999 - darker for better contrast */
-
-    /* Contrast-safe orange for text on light backgrounds */
     --primary-text-color: #cc7a00;
-    /* Darker orange with 4.7:1 contrast ratio */
+    /* Darker orange for text on light backgrounds */
 
-    /* Fonts - Using system font stack instead of Google Fonts */
+    /* UI colors */
+    --border-color: #cccccc;
+    --border-color-dark: #555555;
+
+    /* Fonts */
     --font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --h1-size: 2.5rem;
     --h2-size: 2rem;
@@ -43,17 +42,9 @@
     --background-color: #121212;
     --text-color: #f5f5f5;
     --light-color: #1e1e1e;
-    --nav-border-color: #333;
-
-    /* Dark theme safe colors */
     --muted-text-color: #cccccc;
-    /* Light enough for dark backgrounds */
     --secondary-text-color: #bbbbbb;
-    /* Light enough for dark backgrounds */
     --tertiary-text-color: #aaaaaa;
-    /* Light enough for dark backgrounds */
-
-    /* In dark mode, use the bright orange since background is dark */
     --primary-text-color: #f29e23;
     /* Bright orange works on dark backgrounds */
 }
@@ -79,16 +70,6 @@ h1 {
     margin: 0;
 }
 
-/* Specific fix for hero title h1 inside section - more specific selector */
-section.hero .hero__title {
-    font-size: 2rem; /* Explicit font-size to prevent browser deprecation warning */
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 0;
-    color: var(--secondary-color);
-    letter-spacing: -0.01em;
-}
-
 h2 {
     font-size: var(--h2-size);
 }
@@ -97,35 +78,57 @@ h3 {
     font-size: var(--h3-size);
 }
 
+/* Hero title specific styling - target h1 directly */
+h1.hero__title {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: var(--secondary-color);
+    letter-spacing: -0.01em;
+}
+
+.dark-theme h1.hero__title {
+    color: var(--text-color);
+}
+
+/* Main title specific styling - target h1 directly */
+h1.main__title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.dark-theme h1.main__title {
+    color: var(--text-color);
+}
+
 /* Header Styles */
 .header {
     background-color: var(--light-color);
     padding: 0.5rem 1rem;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--border-color);
     position: relative;
 }
 
-/* New mobile styles for header container */
+.dark-theme .header {
+    border-bottom: 1px solid var(--border-color-dark);
+}
+
 .header__container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Header Navigation Container - remove positioning context */
 .header__nav-container {
     display: flex;
     align-items: center;
-}
-
-.dark-theme .header {
-    border-bottom: 1px solid #555555;
 }
 
 .header__logo-container {
@@ -144,14 +147,10 @@ h3 {
     flex-direction: column;
 }
 
-.header__title h1 {
+.header__title h2 {
     font-size: 1.2rem;
     line-height: 1.2;
     color: var(--secondary-color);
-}
-
-.dark-theme .header__title h1 {
-    color: var(--text-color);
 }
 
 .header__title p {
@@ -159,6 +158,7 @@ h3 {
     color: var(--secondary-color);
 }
 
+.dark-theme .header__title h2,
 .dark-theme .header__title p {
     color: var(--text-color);
 }
@@ -180,14 +180,12 @@ h3 {
     justify-content: center;
 }
 
-/* Theme Toggle Icon */
 .theme-icon {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background: linear-gradient(to right, #000 50%, #fff 50%);
     border: 2px solid #000;
-    position: relative;
     transition: transform 0.3s ease;
 }
 
@@ -201,9 +199,6 @@ h3 {
     cursor: pointer;
     font-size: 1.5rem;
     padding: 0.25rem;
-}
-
-.dark-theme .nav__toggle-menu {
     color: var(--text-color);
 }
 
@@ -232,8 +227,7 @@ h3 {
 }
 
 .nav__item {
-    margin-bottom: 0;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav__link {
@@ -266,16 +260,6 @@ main {
     padding: 0;
 }
 
-.main__title {
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.dark-theme .main__title {
-    color: #ffffff;
-}
-
 /* Footer */
 .footer {
     background-color: #1a1a1a;
@@ -295,7 +279,6 @@ main {
     margin: 0 auto;
 }
 
-/* Contact Section */
 .footer__contact {
     text-align: center;
 }
@@ -326,7 +309,6 @@ main {
     text-decoration: underline;
 }
 
-/* Project Info Section */
 .footer__info {
     text-align: center;
     display: flex;
@@ -334,7 +316,6 @@ main {
     gap: 1rem;
 }
 
-/* Social Media Links */
 .footer__social {
     display: flex;
     justify-content: center;
@@ -361,10 +342,8 @@ main {
     width: 24px;
     height: 24px;
     filter: brightness(0) invert(1);
-    /* Makes icons white */
 }
 
-/* Project Information */
 .footer__project-info {
     display: flex;
     flex-direction: column;
@@ -391,46 +370,8 @@ main {
 
 .footer__last-modified {
     font-size: var(--footer-size);
-    color: #cccccc;
+    color: var(--border-color);
     margin: 0;
-}
-
-/* Dark Mode Footer Styles */
-.dark-theme .footer {
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-}
-
-.dark-theme .footer__business-name {
-    color: var(--primary-text-color);
-}
-
-.dark-theme .footer__address {
-    color: #f5f5f5;
-}
-
-.dark-theme .footer__address a {
-    color: #f5f5f5;
-}
-
-.dark-theme .footer__address a:hover {
-    color: var(--primary-text-color);
-}
-
-.dark-theme .footer__project-title {
-    color: var(--primary-text-color);
-}
-
-.dark-theme .footer__student-name {
-    color: #f5f5f5;
-}
-
-.dark-theme .footer__copyright {
-    color: #f5f5f5;
-}
-
-.dark-theme .footer__last-modified {
-    color: #cccccc;
 }
 
 /* ========== DIRECTORY PAGE STYLES ========== */
@@ -440,7 +381,6 @@ main {
     margin: 0 auto;
 }
 
-/* View Controls */
 .directory__view-controls {
     display: flex;
     justify-content: center;
@@ -462,14 +402,14 @@ main {
 }
 
 .dark-theme .view-btn {
-    background-color: #555555;
-    border-color: #555555;
+    background-color: var(--border-color-dark);
+    border-color: var(--border-color-dark);
     color: #ffffff;
 }
 
 .view-btn:hover {
     background-color: #f0f0f0;
-    border-color: #555555;
+    border-color: var(--border-color-dark);
 }
 
 .dark-theme .view-btn:hover {
@@ -482,17 +422,15 @@ main {
     border-color: #e8901e;
 }
 
-/* Directory Grid View */
+.directory__container {
+    min-height: 400px;
+}
+
 .directory__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0.5rem;
-}
-
-/* Directory Container - Prevents layout shift */
-.directory__container {
-    min-height: 400px;
 }
 
 .directory__grid-card {
@@ -524,13 +462,13 @@ main {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
 
 .dark-theme .directory__card-img {
-    border-color: #555555;
+    border-color: var(--border-color-dark);
 }
 
 .directory__card-img img {
@@ -580,7 +518,6 @@ main {
     text-decoration: underline;
 }
 
-/* Directory List View */
 .directory__list {
     display: none;
     flex-direction: column;
@@ -603,7 +540,6 @@ main {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Enhanced Zebra Striping */
 .directory__list-item:nth-child(even) {
     background-color: var(--light-color);
 }
@@ -649,10 +585,6 @@ main {
     margin-bottom: 0;
 }
 
-.dark-theme .hero {
-    background-color: var(--light-color);
-}
-
 .hero__content {
     max-width: 900px;
     margin: 0 auto;
@@ -665,12 +597,10 @@ main {
     color: var(--secondary-color);
 }
 
-.dark-theme .hero__title,
 .dark-theme .hero__title strong {
     color: var(--text-color);
 }
 
-/* Full Width Hero Image */
 .hero__image-section {
     width: 100%;
     margin: 0;
@@ -698,10 +628,6 @@ main {
     text-align: center;
 }
 
-.dark-theme .cta {
-    background-color: var(--background-color);
-}
-
 .cta__container {
     max-width: 800px;
     margin: 0 auto;
@@ -725,10 +651,6 @@ main {
     font-size: 1.125rem;
 }
 
-.dark-theme .cta__description {
-    color: var(--text-color);
-}
-
 .cta__button {
     background-color: var(--primary-color);
     color: #000000;
@@ -740,8 +662,6 @@ main {
     display: inline-block;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(242, 158, 35, 0.3);
-    text-transform: none;
-    letter-spacing: normal;
 }
 
 .cta__button:hover {
@@ -764,7 +684,6 @@ main {
     gap: 2rem;
 }
 
-/* Events Section - Updated for container layout */
 .events {
     margin-bottom: 0;
     padding: 0;
@@ -775,7 +694,6 @@ main {
     margin: 0;
 }
 
-/* Weather Section - Updated for container layout */
 .weather {
     background-color: transparent;
     padding: 0;
@@ -784,16 +702,27 @@ main {
     box-shadow: none;
 }
 
-/* Events Section Styling */
-.events__title {
+.weather__container {
+    max-width: none;
+    margin: 0;
+}
+
+.events__title,
+.weather__title {
     text-align: center;
     color: var(--secondary-color);
     margin-bottom: 2rem;
     font-size: 2rem;
 }
 
-.dark-theme .events__title {
+.dark-theme .events__title,
+.dark-theme .weather__title {
     color: var(--text-color);
+}
+
+.weather__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
 .events__grid {
@@ -811,19 +740,18 @@ main {
     display: flex;
     gap: 1rem;
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .dark-theme .event-card {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.event-card:hover,
-.event-card--hovered {
+.event-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.dark-theme .event-card:hover,
-.dark-theme .event-card--hovered {
+.dark-theme .event-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -897,23 +825,7 @@ main {
     content: '📍 ';
 }
 
-/* Weather Section Styling */
-.weather__container {
-    max-width: none;
-    margin: 0;
-}
-
-.weather__title {
-    text-align: center;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
-}
-
-.dark-theme .weather__title {
-    color: var(--text-color);
-}
-
+/* Weather Section */
 .weather__card {
     background-color: var(--light-color);
     border-radius: 12px;
@@ -995,12 +907,12 @@ main {
 }
 
 .weather__forecast {
-    border-top: 2px solid #cccccc;
+    border-top: 2px solid var(--border-color);
     padding-top: 1rem;
 }
 
 .dark-theme .weather__forecast {
-    border-color: #555555;
+    border-color: var(--border-color-dark);
 }
 
 .weather__forecast-title {
@@ -1096,26 +1008,24 @@ main {
     grid-template-columns: 1fr;
 }
 
-/* Spotlight Cards */
 .spotlight-card {
     background-color: var(--light-color);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .dark-theme .spotlight-card {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.spotlight-card:hover,
-.spotlight-card--hovered {
+.spotlight-card:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.dark-theme .spotlight-card:hover,
-.dark-theme .spotlight-card--hovered {
+.dark-theme .spotlight-card:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -1215,15 +1125,9 @@ main {
     box-shadow: 0 6px 20px rgba(242, 158, 35, 0.4);
 }
 
-/* Dark theme overrides for orange text elements - restore orange in dark mode */
-.dark-theme .weather__value {
-    color: var(--primary-text-color);
-}
-
-.dark-theme .forecast-day__temp {
-    color: var(--primary-text-color);
-}
-
+/* Dark theme overrides for orange text elements */
+.dark-theme .weather__value,
+.dark-theme .forecast-day__temp,
 .dark-theme .spotlight-card__membership {
     color: var(--primary-text-color);
 }
