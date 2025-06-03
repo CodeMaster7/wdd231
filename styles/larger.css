@@ -53,6 +53,16 @@
     .courses-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Modal content container */
+    .course-modal__content {
+        padding: var(--spacing-large);
+    }
+
+    /* Modal title */
+    .course-modal__title {
+        font-size: var(--font-large);
+    }
 }
 
 /* Media Query for Large Devices - Desktops */
