@@ -349,3 +349,105 @@ footer {
 footer p {
     margin: var(--spacing-small) 0;
 }
+
+/*=======================
+=     MODAL STYLES      =
+========================*/
+/* Dialog element styling */
+.course-modal {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0;
+    max-width: 95vw;
+    width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Backdrop styling - creates the semi-transparent overlay */
+.course-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+/* Modal content container */
+.course-modal__content {
+    padding: var(--spacing-medium);
+    position: relative;
+}
+
+/* Close button styling */
+.course-modal__close {
+    position: absolute;
+    top: var(--spacing-small);
+    right: var(--spacing-small);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.course-modal__close:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Modal title */
+.course-modal__title {
+    margin: 0 0 var(--spacing-medium) 0;
+    color: var(--primary-color);
+    font-size: var(--font-medium);
+    line-height: 1.3;
+    padding-right: 50px;
+    /* Space for close button */
+}
+
+/* Modal details container */
+.course-modal__details p {
+    margin-bottom: var(--spacing-small);
+    line-height: 1.5;
+}
+
+/* Credits, certificate, and tech info */
+.course-modal__credits,
+.course-modal__certificate,
+.course-modal__tech {
+    color: var(--text-dark);
+}
+
+/* Description section */
+.course-modal__description {
+    margin-top: var(--spacing-medium);
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.course-modal__description-text {
+    margin-top: var(--spacing-small);
+    padding: var(--spacing-medium);
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Technology stack styling */
+.course-modal__tech span {
+    display: inline-block;
+    margin-top: var(--spacing-small);
+    padding: 4px 8px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    font-size: var(--font-small);
+    font-weight: 500;
+}
