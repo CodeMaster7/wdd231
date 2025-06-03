@@ -7,12 +7,21 @@ const allBtn = document.getElementById('allBtn')
 const cseBtn = document.getElementById('cseBtn')
 const wddBtn = document.getElementById('wddBtn')
 
+// Modal elements
+const courseModal = document.getElementById('courseModal')
+const closeModalBtn = document.getElementById('closeModal')
+const modalTitle = document.getElementById('modalTitle')
+const modalCredits = document.getElementById('modalCredits')
+const modalCertificate = document.getElementById('modalCertificate')
+const modalDescription = document.getElementById('modalDescription')
+const modalTechnology = document.getElementById('modalTechnology')
+
 // Toggle navigation menu
 hamburgerBtn.addEventListener('click', () => {
 	primaryNav.classList.toggle('responsive')
 })
 
-// Display courses
+// Display courses - now creates simple clickable cards
 function displayCourses(coursesToDisplay) {
 	// Clear the container
 	coursesContainer.innerHTML = ''
@@ -21,7 +30,7 @@ function displayCourses(coursesToDisplay) {
 	const totalCredits = coursesToDisplay.reduce((total, course) => total + course.credits, 0)
 	totalCreditsSpan.textContent = totalCredits
 
-	// Create and append course cards
+	// Create and append simple course cards
 	coursesToDisplay.forEach((course) => {
 		// Create card element
 		const card = document.createElement('div')
@@ -33,24 +42,58 @@ function displayCourses(coursesToDisplay) {
 
 		card.className = `${baseClass} ${subjectClass} ${statusClass}`.trim()
 
+		// Make card clickable with cursor pointer
+		card.style.cursor = 'pointer'
+
 		// Create completion status indicator
 		const completionStatus = course.completed
 			? '<span class="course-card__status">✓ Completed</span>'
 			: '<span class="course-card__status">In Progress</span>'
 
-		// Create card content
+		// Create simple card content - course code and completion status
 		card.innerHTML = `
             <h3 class="course-card__code">${course.subject} ${course.number}</h3>
-            <h4 class="course-card__title">${course.title}</h4>
-            <p class="course-card__credits">Credits: ${course.credits}</p>
-            <p class="course-card__tech">Technologies: ${course.technology.join(', ')}</p>
             ${completionStatus}
         `
+
+		// Add click event listener to open modal
+		card.addEventListener('click', () => {
+			showCourseModal(course)
+		})
 
 		// Append card to container
 		coursesContainer.appendChild(card)
 	})
 }
+
+// Function to display the course modal
+function showCourseModal(course) {
+	// Populate modal with course data
+	modalTitle.textContent = `${course.subject} ${course.number} - ${course.title}`
+	modalCredits.textContent = course.credits
+	modalCertificate.textContent = course.certificate
+	modalDescription.textContent = course.description
+	modalTechnology.textContent = course.technology.join(', ')
+
+	// Show the modal
+	courseModal.showModal()
+}
+
+// Function to close the modal
+function closeCourseModal() {
+	courseModal.close()
+}
+
+// Close modal when close button is clicked
+closeModalBtn.addEventListener('click', closeCourseModal)
+
+// Close modal when clicking outside of it (on the backdrop)
+courseModal.addEventListener('click', (e) => {
+	// Check if the click was on the dialog itself (backdrop area)
+	if (e.target === courseModal) {
+		closeCourseModal()
+	}
+})
 
 // Filter buttons functionality
 allBtn.addEventListener('click', () => {
