@@ -259,6 +259,163 @@
     }
 
     .weather__details {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* ========== JOIN PAGE DESKTOP STYLES ========== */
+
+    /* Join Container Desktop */
+    .join__container {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    /* Join Title */
+    .join__title {
+        margin-bottom: 4rem;
+    }
+
+    /* Desktop Layout - Side by Side */
+    .join__layout {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: flex-start;
+    }
+
+    .join__form-section {
+        flex: 2;
+        padding: 3rem;
+    }
+
+    .join__membership-section {
+        flex: 0 0 auto;
+        position: sticky;
+        top: 2rem;
+        width: auto;
+    }
+
+    /* Form improvements for desktop */
+    .form__fieldset {
+        padding: 2rem;
+    }
+
+    /* Two-column form layout for personal info */
+    .form__fieldset:first-of-type .form__label:nth-child(2),
+    .form__fieldset:first-of-type .form__label:nth-child(3) {
+        display: inline-block;
+        width: calc(50% - 0.75rem);
+    }
+
+    .form__fieldset:first-of-type .form__label:nth-child(2) {
+        margin-right: 1.5rem;
+    }
+
+    /* Membership Cards Grid for Desktop */
+    .membership__cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Make cards more substantial on desktop */
+    .membership__card {
+        padding: 2.5rem 2rem;
+        min-height: 200px;
+    }
+
+    .membership__card-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .membership__card-price {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .membership__card-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .membership__card-button {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        margin-top: auto;
+    }
+
+    /* Modal improvements for desktop */
+    .modal__content {
+        max-width: 600px;
+    }
+
+    .modal__header {
+        padding: 2rem 2.5rem 1.5rem;
+    }
+
+    .modal__body {
+        padding: 1.5rem 2.5rem 2.5rem;
+    }
+
+    /* ========== THANK YOU PAGE STYLES ========== */
+    .thankyou__container {
+        max-width: 1000px;
+    }
+
+    .thankyou__message {
+        padding: 4rem 3rem;
+    }
+
+    .thankyou__title {
+        font-size: 3rem;
+    }
+
+    .thankyou__subtitle {
+        font-size: 1.375rem;
+    }
+
+    .thankyou__actions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .thankyou__button {
+        flex: 0 0 auto;
+        min-width: 200px;
+    }
+
+    /* Desktop: Restore horizontal layout for detail items */
+    .detail__item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .detail__label {
+        width: auto;
+        min-width: 40%;
+        flex-shrink: 0;
+    }
+
+    .detail__value {
+        text-align: right;
+        flex: 1;
+    }
+
+    /* Keep full-width items as column layout */
+    .detail__item--full {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .detail__item--full .detail__label {
+        width: 100%;
+    }
+
+    .detail__item--full .detail__value {
+        text-align: left;
     }
 }
