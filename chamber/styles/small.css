@@ -2015,3 +2015,244 @@ main {
     background-color: var(--background-color);
     border-color: var(--border-color-dark);
 }
+
+/* ==========================================================================
+   DISCOVER PAGE STYLES - Mobile First
+   ========================================================================== */
+
+/* Main discover page container */
+.discover__content {
+    padding: 1rem 0 3rem;
+    background-color: var(--background-color);
+    min-height: calc(100vh - 200px);
+    /* Account for header/footer */
+}
+
+.discover__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.discover__title {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.dark-theme .discover__title {
+    color: var(--text-color);
+}
+
+.discover__subtitle {
+    color: var(--muted-text-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+.dark-theme .discover__subtitle {
+    color: var(--muted-text-color);
+}
+
+/* Visit message section */
+.discover__visit-message {
+    font-size: 1.125rem;
+    margin: 0 0 5rem 0;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Visit message variants */
+.discover__visit-message--welcome {
+    color: #1976d2;
+}
+
+.dark-theme .discover__visit-message--welcome {
+    color: #e3f2fd;
+}
+
+.discover__visit-message--frequent {
+    color: #7b1fa2;
+}
+
+.dark-theme .discover__visit-message--frequent {
+    color: #f3e5f5;
+}
+
+.discover__visit-message--returning {
+    color: #2e7d32;
+}
+
+.dark-theme .discover__visit-message--returning {
+    color: #e8f5e8;
+}
+
+
+
+/* Places section */
+.discover__places {
+    margin-top: 2rem;
+}
+
+.places__title {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.dark-theme .places__title {
+    color: var(--text-color);
+}
+
+/* Places grid - Mobile: 1 column */
+.places__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Individual place card */
+.place-card {
+    background-color: var(--light-color);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .place-card {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Place card figure and image */
+.place-card__figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.place-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Place card content */
+.place-card__title {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin: 1rem 1rem 0.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.dark-theme .place-card__title {
+    color: var(--text-color);
+}
+
+.place-card__address {
+    font-style: normal;
+    color: var(--muted-text-color);
+    margin: 0 1rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.dark-theme .place-card__address {
+    color: var(--muted-text-color);
+}
+
+.place-card__description {
+    color: var(--text-color);
+    margin: 0 1rem 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.dark-theme .place-card__description {
+    color: var(--text-color);
+}
+
+/* Place card button */
+.place-card__button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 1rem 1.5rem;
+    width: calc(100% - 2rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dark-theme .place-card__button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.place-card__button:hover {
+    background-color: #cc7a00;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 136, 0, 0.3);
+}
+
+.dark-theme .place-card__button:hover {
+    background-color: #cc7a00;
+    box-shadow: 0 2px 8px rgba(255, 136, 0, 0.4);
+}
+
+.place-card__button:active {
+    transform: translateY(0);
+}
+
+/* Error message */
+.error-message {
+    text-align: center;
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ffcdd2;
+    font-size: 1.125rem;
+    margin: 2rem 0;
+}
+
+.dark-theme .error-message {
+    background-color: #b71c1c;
+    color: #ffebee;
+    border-color: #d32f2f;
+}
+
+/* Loading state */
+.places__grid:empty::before {
+    content: "Loading amazing places...";
+    display: block;
+    text-align: center;
+    color: var(--muted-text-color);
+    font-size: 1.125rem;
+    padding: 3rem;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .places__grid:empty::before {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+    color: var(--muted-text-color);
+}
