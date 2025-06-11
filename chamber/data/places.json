@@ -1,0 +1,60 @@
+{
+	"places": [
+		{
+			"id": 1,
+			"title": "Grand Canyon National Park",
+			"image": "images/grand-canyon.webp",
+			"address": "South Rim Drive, Grand Canyon Village, AZ 86023",
+			"description": "One of the world's most spectacular natural wonders. Experience breathtaking views, hiking trails, and the geological history spanning millions of years at this UNESCO World Heritage Site."
+		},
+		{
+			"id": 2,
+			"title": "Sedona Red Rock Country",
+			"image": "images/sedona-red.webp",
+			"address": "Sedona, AZ 86336",
+			"description": "Mystical red sandstone formations create a stunning landscape perfect for hiking, jeep tours, and spiritual retreats. Known for its energy vortexes and world-class spas."
+		},
+		{
+			"id": 3,
+			"title": "Antelope Canyon",
+			"image": "images/antelope-canyon.webp",
+			"address": "Page, AZ 86040",
+			"description": "A magnificent slot canyon known for its wave-like structure and light beams that shine down into openings in the canyon. One of the most photographed canyons in the Southwest."
+		},
+		{
+			"id": 4,
+			"title": "Monument Valley",
+			"image": "images/monument-valley.webp",
+			"address": "Monument Valley, UT/AZ Border",
+			"description": "Iconic desert landscape featuring massive sandstone buttes rising from the valley floor. Sacred to the Navajo Nation and featured in countless Western films and advertisements."
+		},
+		{
+			"id": 5,
+			"title": "Petrified Forest National Park",
+			"image": "images/petrified-forest.webp",
+			"address": "Petrified Forest National Park, AZ 86028",
+			"description": "Home to one of the world's largest concentrations of petrified wood, plus colorful badlands, petroglyphs, and fossils. A journey through 225 million years of history."
+		},
+		{
+			"id": 6,
+			"title": "Saguaro National Park",
+			"image": "images/saguaro-park.webp",
+			"address": "Tucson, AZ 85730",
+			"description": "Protects our nation's largest cacti, the giant saguaro. These majestic plants are found only in the Sonoran Desert and can live for 150-200 years, growing up to 40 feet tall."
+		},
+		{
+			"id": 7,
+			"title": "Horseshoe Bend",
+			"image": "images/horse-shoe.webp",
+			"address": "Page, AZ 86040",
+			"description": "A dramatic 270-degree bend in the Colorado River, creating a horseshoe-shaped meander. This overlook offers stunning views 1,000 feet above the river and is a photographer's paradise."
+		},
+		{
+			"id": 8,
+			"title": "Canyon de Chelly National Monument",
+			"image": "images/canyon-chelly.webp",
+			"address": "Chinle, AZ 86503",
+			"description": "Ancient ruins and rock art preserve the culture of early inhabitants. Spider Rock, an 800-foot sandstone spire, rises dramatically from the canyon floor in this sacred Navajo homeland."
+		}
+	]
+}
