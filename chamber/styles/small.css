@@ -247,7 +247,7 @@ h1.main__title {
 .nav__link:hover,
 .nav__link:focus {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #000;
 }
 
 .dark-theme .nav__link:hover,
@@ -258,7 +258,7 @@ h1.main__title {
 /* Active navigation link */
 .nav__link--active {
     background-color: var(--primary-color);
-    color: var(--light-color);
+    color: #000;
     font-weight: 600;
 }
 
