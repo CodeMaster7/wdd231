@@ -255,6 +255,18 @@ h1.main__title {
     color: #000;
 }
 
+/* Active navigation link */
+.nav__link--active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+.dark-theme .nav__link--active {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
 /* Main Content */
 main {
     padding: 0;
