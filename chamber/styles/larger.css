@@ -418,4 +418,101 @@
     .detail__item--full .detail__value {
         text-align: left;
     }
+
+    /* ========== DISCOVER PAGE DESKTOP STYLES ========== */
+
+    /* Discover page responsive layout */
+    .discover__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .discover__subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Visit message improvements for desktop */
+    .discover__visit-message {
+        font-size: 1.1875rem;
+    }
+
+    /* Places grid responsive - 2 columns for desktop */
+    .places__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .places__title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Place card improvements for desktop - horizontal layout */
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "image title"
+            "image address"
+            "image description"
+            "image button";
+        gap: 0 1.5rem;
+        align-items: start;
+        transition: all 0.3s ease;
+    }
+
+    .place-card__figure {
+        grid-area: image;
+        align-self: stretch;
+    }
+
+    .place-card__image {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .place-card:hover .place-card__image {
+        transform: scale(1.05);
+    }
+
+    .place-card__title {
+        grid-area: title;
+        font-size: 1.375rem;
+        margin: 1.5rem 0 0.75rem 0;
+        align-self: start;
+    }
+
+    .place-card__address {
+        grid-area: address;
+        margin: 0 0 1rem 0;
+        font-size: 0.9375rem;
+        align-self: start;
+    }
+
+    .place-card__description {
+        grid-area: description;
+        margin: 0 0 1.5rem 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        align-self: start;
+    }
+
+    .place-card__button {
+        grid-area: button;
+        margin: 0;
+        width: fit-content;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        align-self: end;
+        margin-bottom: 1rem;
+    }
+
+    /* Larger screens - improve spacing */
+    .discover__container {
+        padding: 0 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
