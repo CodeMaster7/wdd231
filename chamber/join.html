@@ -23,33 +23,35 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__logo-container">
-				<img
-					src="images/shared/chamber-logo-light.svg"
-					alt="Surprise Chamber of Commerce Logo"
-					class="header__logo"
-					width="100"
-					height="100"
-				>
-				<div class="header__title">
-					<h2>Surprise</h2>
-					<p>Chamber of Commerce</p>
+			<div class="header__container">
+				<div class="header__logo-container">
+					<img
+						src="images/shared/chamber-logo-light.svg"
+						alt="Surprise Chamber of Commerce Logo"
+						class="header__logo"
+						width="100"
+						height="100"
+					>
+					<div class="header__title">
+						<h2>Surprise</h2>
+						<p>Chamber of Commerce</p>
+					</div>
 				</div>
-			</div>
-			<div class="header__nav-container">
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
-						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
-						<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
-					</ul>
-				</nav>
-				<div class="header__controls">
-					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
-						<span class="theme-icon"></span>
-					</button>
-					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+				<div class="header__nav-container">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+							<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
+							<li class="nav__item"><a href="join.html" class="nav__link nav__link--active">Join</a></li>
+							<li class="nav__item"><a href="discover.html" class="nav__link">Discover</a></li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+							<span class="theme-icon"></span>
+						</button>
+						<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -67,19 +69,40 @@
 
 								<label class="form__label">
 									First Name *
-									<input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required class="form__input">
+									<input
+										type="text"
+										name="firstName"
+										title="Enter your first name"
+										autocomplete="given-name"
+										required
+										class="form__input"
+									>
 									<span class="form__help-text">Please enter your first name</span>
 								</label>
 
 								<label class="form__label">
 									Last Name *
-									<input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required class="form__input">
+									<input
+										type="text"
+										name="lastName"
+										title="Enter your last name"
+										autocomplete="family-name"
+										required
+										class="form__input"
+									>
 									<span class="form__help-text">Please enter your last name</span>
 								</label>
 
 								<label class="form__label">
 									Organization Title
-									<input type="text" name="orgTitle" title="Enter your title within your organization (minimum 7 characters, letters, hyphens, and spaces only)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" class="form__input">
+									<input
+										type="text"
+										name="orgTitle"
+										title="Enter your title within your organization (minimum 7 characters, letters, hyphens, and spaces only)"
+										autocomplete="organization-title"
+										pattern="[A-Za-z\s\-]{7,}"
+										class="form__input"
+									>
 								</label>
 							</fieldset>
 
@@ -89,13 +112,28 @@
 
 								<label class="form__label">
 									Email Address *
-									<input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@company.com" required class="form__input">
+									<input
+										type="email"
+										name="email"
+										title="Enter your email address"
+										autocomplete="email"
+										placeholder="example@company.com"
+										required
+										class="form__input"
+									>
 									<span class="form__help-text">Please enter a valid email address</span>
 								</label>
 
 								<label class="form__label">
 									Mobile Phone *
-									<input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required class="form__input">
+									<input
+										type="tel"
+										name="phone"
+										title="Enter your mobile phone number"
+										autocomplete="tel"
+										required
+										class="form__input"
+									>
 									<span class="form__help-text">Please enter your mobile phone number</span>
 								</label>
 							</fieldset>
@@ -106,7 +144,14 @@
 
 								<label class="form__label">
 									Business/Organization Name *
-									<input type="text" name="businessName" title="Enter your business or organization name" autocomplete="organization" required class="form__input">
+									<input
+										type="text"
+										name="businessName"
+										title="Enter your business or organization name"
+										autocomplete="organization"
+										required
+										class="form__input"
+									>
 									<span class="form__help-text">Please enter your business or organization name</span>
 								</label>
 
