@@ -1,0 +1,469 @@
+/*===========================================
+  FRONTEND QUIZ APP SITE PLAN STYLES
+===========================================*/
+
+/*===========================================
+  CSS VARIABLES
+===========================================*/
+:root {
+    /* Frontend Quiz App Color Palette */
+    --primary-purple: #A729F5;
+    --navy-blue: #313E51;
+    --dark-navy: #3B4D66;
+    --light-grey: #F4F6FA;
+    --pure-white: #FFFFFF;
+    --success-green: #26D0CE;
+    --error-red: #EE5454;
+    --text-dark: #313E51;
+    --text-light: #626C7F;
+
+    /* Typography */
+    --font-family: 'Rubik', sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Font Sizes - Using rem for scalability */
+    --font-size-small: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 1.875rem;
+    /* 30px */
+    --font-size-4xl: 2.25rem;
+    /* 36px */
+
+    /* Spacing - Using rem for consistency */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 0.75rem;
+    /* 12px */
+    --spacing-md: 1rem;
+    /* 16px */
+    --spacing-lg: 1.5rem;
+    /* 24px */
+    --spacing-xl: 2rem;
+    /* 32px */
+    --spacing-2xl: 3rem;
+    /* 48px */
+    --spacing-3xl: 4rem;
+    /* 64px */
+
+    /* Layout */
+    --max-width: 1200px;
+    --container-padding: var(--spacing-md);
+    --border-radius: 0.5rem;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/*===========================================
+  RESET & BASE STYLES
+===========================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-grey);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*===========================================
+  TYPOGRAPHY
+===========================================*/
+h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-purple);
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--navy-blue);
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 3px solid var(--primary-purple);
+    padding-bottom: var(--spacing-sm);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    color: var(--navy-blue);
+    margin-bottom: var(--spacing-md);
+}
+
+p {
+    font-size: var(--font-size-base);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+ul {
+    list-style: none;
+    margin-bottom: var(--spacing-md);
+}
+
+li {
+    font-size: var(--font-size-base);
+    color: var(--text-light);
+    position: relative;
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Custom bullet points using pseudo-elements */
+li::before {
+    content: "▶";
+    color: var(--primary-purple);
+    font-weight: var(--font-weight-bold);
+    position: absolute;
+    left: 0;
+}
+
+a {
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--navy-blue);
+    text-decoration: underline;
+}
+
+/*===========================================
+  LAYOUT COMPONENTS
+===========================================*/
+header {
+    background: linear-gradient(135deg, var(--primary-purple), var(--navy-blue));
+    padding: var(--spacing-2xl) var(--container-padding);
+    margin-bottom: var(--spacing-3xl);
+}
+
+header h1 {
+    color: var(--pure-white);
+    margin-bottom: 0;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+section {
+    background-color: var(--pure-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(167, 41, 245, 0.1);
+}
+
+/*===========================================
+  COLOR SCHEMA SECTION
+===========================================*/
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.color-sample {
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(167, 41, 245, 0.2);
+}
+
+.color-sample h3 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.color-sample p {
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Color sample visual representations */
+.primary-purple::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary-purple);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.navy-blue::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--navy-blue);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.dark-navy::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--dark-navy);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.light-grey::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--light-grey);
+    border: 2px solid var(--navy-blue);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.pure-white::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--pure-white);
+    border: 2px solid var(--navy-blue);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.success-green::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--success-green);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+.error-red::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--error-red);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+}
+
+/*===========================================
+  TYPOGRAPHY SECTION
+===========================================*/
+.font-samples {
+    margin-top: var(--spacing-lg);
+}
+
+.font-sample {
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(167, 41, 245, 0.2);
+}
+
+.font-usage {
+    font-weight: var(--font-weight-medium);
+    color: var(--navy-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+/*===========================================
+  WIREFRAMES SECTION
+===========================================*/
+.wireframe-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-lg);
+}
+
+.mobile-wireframe,
+.desktop-wireframe {
+    background-color: var(--light-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    border: 1px solid rgba(167, 41, 245, 0.2);
+}
+
+.wireframe__figure {
+    margin-bottom: var(--spacing-lg);
+}
+
+.wireframe__image {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 2px solid var(--primary-purple);
+}
+
+.wireframe__caption {
+    font-size: var(--font-size-small);
+    color: var(--text-light);
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-style: italic;
+}
+
+.wireframe__link {
+    font-weight: var(--font-weight-medium);
+}
+
+.wireframe__details p {
+    font-weight: var(--font-weight-medium);
+    color: var(--navy-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.wireframe__features {
+    background-color: var(--pure-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.wireframe__features li {
+    color: var(--text-dark);
+    font-size: var(--font-size-small);
+}
+
+/*===========================================
+  FOOTER
+===========================================*/
+.footer {
+    background-color: var(--navy-blue);
+    color: var(--pure-white);
+    padding: var(--spacing-xl) var(--container-padding);
+    margin-top: var(--spacing-3xl);
+    text-align: center;
+}
+
+.footer__content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.footer__copyright,
+.footer__modified {
+    font-size: var(--font-size-small);
+    margin-bottom: var(--spacing-xs);
+    color: var(--pure-white);
+}
+
+.footer__modified {
+    color: var(--success-green);
+    font-weight: var(--font-weight-medium);
+}
+
+/*===========================================
+  RESPONSIVE DESIGN
+===========================================*/
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 1.875rem;
+        /* 30px */
+        --font-size-3xl: 1.5rem;
+        /* 24px */
+        --spacing-2xl: 2rem;
+        /* 32px */
+        --spacing-3xl: 2.5rem;
+        /* 40px */
+    }
+
+    .colors {
+        grid-template-columns: 1fr;
+    }
+
+    .wireframe-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    section {
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: var(--spacing-sm);
+    }
+
+    header {
+        padding: var(--spacing-lg) var(--container-padding);
+    }
+
+    section {
+        padding: var(--spacing-md);
+    }
+}
+
+/*===========================================
+  ACCESSIBILITY & FOCUS STATES
+===========================================*/
+*:focus {
+    outline: 2px solid var(--primary-purple);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+        border: 2px solid var(--navy-blue);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    a {
+        transition: none;
+    }
+}
