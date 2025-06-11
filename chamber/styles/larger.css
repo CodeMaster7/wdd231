@@ -85,10 +85,11 @@
         width: 100%;
     }
 
+    /* Regular navigation link hover - Desktop */
     .nav__link:hover,
     .nav__link:focus {
         background-color: transparent;
-        color: var(--primary-color);
+        color: #cc7a00;
     }
 
     /* Fix for dark mode hover */
@@ -99,20 +100,28 @@
     }
 
     /* Active navigation link - Desktop */
-    .nav__link--active {
-        background-color: transparent !important;
-        color: var(--primary-color) !important;
+    .nav__link.nav__link--active {
+        background-color: transparent;
+        color: #cc7a00;
+        /* Darker orange for better contrast */
         font-weight: 700;
     }
 
-    .nav__link--active::after {
-        width: 100% !important;
-        background-color: var(--primary-color) !important;
+    .nav__link.nav__link--active::after {
+        width: 100%;
+        background-color: #cc7a00;
+        /* Darker orange for better contrast */
     }
 
-    .dark-theme .nav__link--active {
-        color: var(--primary-color) !important;
-        background-color: transparent !important;
+    .dark-theme .nav__link.nav__link--active {
+        color: var(--primary-color);
+        /* Original orange works fine on dark background */
+        background-color: transparent;
+    }
+
+    .dark-theme .nav__link.nav__link--active::after {
+        background-color: var(--primary-color);
+        /* Original orange for dark theme underline */
     }
 
     /* Toggle buttons */
