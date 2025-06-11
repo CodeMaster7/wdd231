@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WDD 231 - Chamber of Commerce Discover - Sam Bonfanti</title>
+		<meta name="description" content="Discover the amazing places in Arizona. We have a lot to offer! Check out our places and learn more about them.">
+		<meta name="author" content="Sam Bonfanti">
+		<!-- Open Graph meta information -->
+		<meta property="og:title" content="WDD 231 - Chamber of Commerce Discover - Sam Bonfanti">
+		<meta property="og:description" content="Discover the amazing places in Arizona. We have a lot to offer! Check out our places and learn more about them.">
+		<meta property="og:image" content="https://sambonfanti.github.io/wdd231/chamber/images/hero.webp">
+		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/chamber/discover.html">
+		<!-- favicon -->
+		<link rel="icon" href="favicon.ico">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<!-- JavaScript -->
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/discover.js" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo-container">
+				<img
+					src="images/shared/chamber-logo-light.svg"
+					alt="Surprise Chamber of Commerce Logo"
+					class="header__logo"
+					width="100"
+					height="100"
+				>
+				<div class="header__title">
+					<h2>Surprise</h2>
+					<p>Chamber of Commerce</p>
+				</div>
+			</div>
+			<div class="header__nav-container">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+						<li class="nav__item"><a href="directory.html" class="nav__link">Directory</a></li>
+						<li class="nav__item"><a href="join.html" class="nav__link">Join</a></li>
+						<li class="nav__item">
+							<a href="discover.html" class="nav__link nav__link--active">Discover</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__controls">
+					<button class="nav__toggle-theme" aria-label="Toggle dark mode">
+						<span class="theme-icon"></span>
+					</button>
+					<button class="nav__toggle-menu" aria-label="Toggle menu">&#9776;</button>
+				</div>
+			</div>
+		</header>
+		<main class="discover__content">
+			<div class="discover__container">
+				<h1 class="discover__title">Discover Surprise</h1>
+				<p class="discover__subtitle">
+                    Explore our vibrant business community and discover what makes Surprise, Arizona special
+				</p>
+                <!-- Visit tracking message -->
+                <p id="visit-message" class="discover__visit-message">Loading...</p>
+				<!-- Places cards section -->
+				<section class="discover__places">
+					<h2 class="places__title">Amazing Places in Arizona</h2>
+					<div class="places__grid" id="place-cards">
+						<!-- Place cards will be populated by JavaScript -->
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<!-- Left column: Contact information -->
+				<div class="footer__contact">
+					<h3 class="footer__business-name">Surprise Chamber of Commerce</h3>
+					<address class="footer__address">
+						<p>123 Grand Avenue</p>
+						<p>Surprise, Arizona 85374</p>
+						<p>info@surprisecc.org</p>
+						<p>(623) 555-1234</p>
+					</address>
+				</div>
+				<!-- Right column: Social media and project info -->
+				<div class="footer__info">
+					<div class="footer__social">
+						<a href="#" class="footer__social-link" aria-label="Facebook">
+							<img src="images/shared/facebook.svg" alt="Facebook" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Instagram">
+							<img src="images/shared/instagram.svg" alt="Instagram" width="32" height="32">
+						</a>
+						<a href="#" class="footer__social-link" aria-label="Twitter">
+							<img src="images/shared/twitter.svg" alt="Twitter" width="32" height="32">
+						</a>
+					</div>
+					<div class="footer__project-info">
+						<p class="footer__project-title">WDD231 Class Project</p>
+						<p class="footer__student-name">Sam Bonfanti</p>
+						<p class="footer__copyright">
+							&copy;
+							<span id="current-year"></span>
+							Surprise Chamber of Commerce
+						</p>
+						<p class="footer__last-modified">
+							Last Modification:
+							<span id="last-modified"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
