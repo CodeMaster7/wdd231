@@ -92,7 +92,7 @@
         color: #cc7a00;
     }
 
-    /* Fix for dark mode hover */
+    /* Fix for dark mode hovers */
     .dark-theme .nav__link:hover,
     .dark-theme .nav__link:focus {
         color: var(--primary-color);
