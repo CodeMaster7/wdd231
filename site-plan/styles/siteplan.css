@@ -437,33 +437,3 @@ section {
         padding: var(--spacing-md);
     }
 }
-
-/*===========================================
-  ACCESSIBILITY & FOCUS STATES
-===========================================*/
-*:focus {
-    outline: 2px solid var(--primary-purple);
-    outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    :root {
-        --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    }
-
-    section {
-        border: 2px solid var(--navy-blue);
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    a {
-        transition: none;
-    }
-}
