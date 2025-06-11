@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WDD 231 - Frontend Quiz App Site Plan - Sam Bonfanti</title>
+		<meta
+			name="description"
+			content="WDD 231 – this is a page to display the site plan for the Frontend Quiz App project"
+		/>
+		<meta name="author" content="Sam Bonfanti" />
+		<!-- External CSS Stylesheet -->
+		<link rel="stylesheet" href="styles/siteplan.css" />
+		<!-- Google Fonts - Rubik -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- JavaScript for Date Functionality -->
+		<script src="scripts/getdates.js" defer></script>
+	</head>
+	<body>
+		<!-- Page Header -->
+		<header><h1>Frontend Quiz App Site Plan</h1></header>
+		<main>
+			<!--==================== SITE NAME SECTION ====================-->
+			<section class="site-info">
+				<h2>Site Name</h2>
+				<p>Frontend Quiz</p>
+				<p>
+					An interactive quiz application designed to test and improve knowledge of frontend development
+					technologies. The app provides multiple quiz categories including HTML, CSS, JavaScript, and
+					Accessibility, helping developers assess their skills and learn new concepts through engaging quiz
+					questions.
+				</p>
+			</section>
+			<!--==================== SITE PURPOSE SECTION ====================-->
+			<section class="site-purpose">
+				<h2>Site Purpose</h2>
+				<p>
+					The Frontend Quiz App is designed to help developers test and enhance their frontend knowledge. The
+					application provides:
+				</p>
+				<ul>
+					<li>Multiple quiz categories covering essential frontend technologies</li>
+					<li>Interactive question and answer format with immediate feedback</li>
+					<li>Score tracking and progress monitoring</li>
+					<li>Light and dark theme options for better user experience</li>
+					<li>Keyboard navigation support for accessibility</li>
+					<li>Responsive design optimized for mobile, tablet, and desktop</li>
+				</ul>
+			</section>
+			<!--==================== SCENARIOS SECTION ====================-->
+			<section class="scenarios">
+				<h2>Scenarios</h2>
+				<ul>
+					<li>How can I test my HTML knowledge and identify areas for improvement?</li>
+					<li>What CSS concepts should I focus on to advance my skills?</li>
+					<li>How well do I understand JavaScript fundamentals and modern practices?</li>
+					<li>Am I following accessibility best practices in my web development?</li>
+					<li>How can I track my progress across different frontend topics?</li>
+					<li>Can I practice frontend concepts on my mobile device during commute?</li>
+				</ul>
+			</section>
+			<!--==================== COLOR SCHEMA SECTION ====================-->
+			<section class="color-schema">
+				<h2>Color Schema</h2>
+				<div class="colors">
+					<div class="color-sample primary-purple">
+						<h3>Primary Purple</h3>
+						<p>HEX: #A729F5</p>
+						<p>Used for: Primary buttons, active states, branding</p>
+					</div>
+					<div class="color-sample navy-blue">
+						<h3>Navy Blue</h3>
+						<p>HEX: #313E51</p>
+						<p>Used for: Dark theme backgrounds, text contrast</p>
+					</div>
+					<div class="color-sample dark-navy">
+						<h3>Dark Navy</h3>
+						<p>HEX: #3B4D66</p>
+						<p>Used for: Secondary backgrounds, cards</p>
+					</div>
+					<div class="color-sample light-grey">
+						<h3>Light Grey</h3>
+						<p>HEX: #F4F6FA</p>
+						<p>Used for: Light theme backgrounds, subtle elements</p>
+					</div>
+					<div class="color-sample pure-white">
+						<h3>Pure White</h3>
+						<p>HEX: #FFFFFF</p>
+						<p>Used for: Cards, buttons, text on dark backgrounds</p>
+					</div>
+					<div class="color-sample success-green">
+						<h3>Success Green</h3>
+						<p>HEX: #26D0CE</p>
+						<p>Used for: Correct answers, success states</p>
+					</div>
+					<div class="color-sample error-red">
+						<h3>Error Red</h3>
+						<p>HEX: #EE5454</p>
+						<p>Used for: Incorrect answers, error states</p>
+					</div>
+				</div>
+			</section>
+			<!--==================== TYPOGRAPHY SECTION ====================-->
+			<section class="typography">
+				<h2>Typography</h2>
+				<div class="font-samples">
+					<div class="font-sample">
+						<h3>Primary Font: Rubik</h3>
+						<p class="font-usage">Usage:</p>
+						<ul>
+							<li>Headings (Medium - 500, Semibold - 600)</li>
+							<li>Body Text (Regular - 400)</li>
+							<li>Questions and Answers (Regular - 400, Medium - 500)</li>
+							<li>Buttons and Interactive Elements (Medium - 500)</li>
+							<li>Navigation and Labels (Regular - 400)</li>
+						</ul>
+						<p>
+							Rubik provides excellent readability and modern feel perfect for a quiz application
+							interface.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!--==================== WIREFRAMES SECTION ====================-->
+			<section class="wireframes" aria-labelledby="wireframes-heading">
+				<h2 id="wireframes-heading">Wireframes</h2>
+				<div class="wireframe-container">
+					<!-- Mobile Wireframe -->
+					<article class="mobile-wireframe">
+						<h3>Mobile View</h3>
+						<figure class="wireframe__figure">
+							<img
+								src="images/mobile-view.png"
+								alt="Mobile wireframe for Frontend Quiz App"
+								class="wireframe__image"
+							/>
+							<figcaption class="wireframe__caption">Mobile view wireframe</figcaption>
+						</figure>
+						<div class="wireframe__details">
+							<p>Mobile interface will feature:</p>
+							<ul class="wireframe__features">
+								<li>Full-screen quiz interface with clear question display</li>
+								<li>Touch-friendly answer buttons with proper spacing</li>
+								<li>Progress indicator showing current question position</li>
+								<li>Theme toggle accessible from header</li>
+								<li>Simplified navigation optimized for touch interaction</li>
+								<li>Responsive typography scaling for readability</li>
+							</ul>
+						</div>
+					</article>
+					<!-- Desktop Wireframe -->
+					<article class="desktop-wireframe">
+						<h3>Desktop View</h3>
+						<figure class="wireframe__figure">
+							<img
+								src="images/desktop-view.png"
+								alt="Desktop wireframe for Frontend Quiz App"
+								class="wireframe__image"
+							/>
+							<figcaption class="wireframe__caption">Desktop wireframe</figcaption>
+						</figure>
+						<div class="wireframe__details">
+							<p>Desktop layout will utilize:</p>
+							<ul class="wireframe__features">
+								<li>Two-column layout with question on left, answers on right</li>
+								<li>Prominent theme toggle in the header</li>
+								<li>Hover states for interactive elements</li>
+								<li>Keyboard navigation support for accessibility</li>
+								<li>Larger typography and spacing for comfortable reading</li>
+								<li>Progress bar and scoring clearly displayed</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<!-- Page Footer with Dynamic Date Information -->
+		<footer class="footer">
+			<div class="footer__content">
+				<p class="footer__copyright">
+					&copy;
+					<span id="currentyear"></span>
+					- Sam Bonfanti - Italy
+				</p>
+				<p id="lastmodified" class="footer__modified"></p>
+			</div>
+		</footer>
+	</body>
+</html>
