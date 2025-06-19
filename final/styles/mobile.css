@@ -564,7 +564,7 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     background-color: var(--color-light-grey);
-    color: var(--color-background);
+    color: var(--color-text-secondary);
     font-weight: var(--font-weight-medium);
     border-radius: var(--radius-sm);
     flex-shrink: 0;
