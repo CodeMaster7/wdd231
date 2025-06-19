@@ -70,7 +70,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
     min-height: 70vh;
-    align-items: center;
+    align-items: start;
 }
 
 .quiz-question__text {
@@ -126,19 +126,33 @@ body {
 
 /* ===== QUIZ RESULTS SCREEN ===== */
 .quiz-results {
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    grid-template-columns: 1fr;
+    gap: 4rem;
     min-height: 70vh;
-    align-items: center;
+    align-items: start;
 }
 
 .quiz-results__heading {
     font-size: 4rem;
     line-height: 1.1;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Create side-by-side layout for score card and form */
+.quiz-results__score-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 6rem;
+    align-items: start;
+    margin-bottom: 4rem;
 }
 
 .quiz-results__score-card {
     padding: 4rem;
+    max-width: 600px;
+    margin-top: 6rem;
 }
 
 .quiz-results__subject {
@@ -170,7 +184,8 @@ body {
 }
 
 .form-group {
-    margin-bottom: var(--spacing-2xl);
+    margin: 0 0 var(--spacing-2xl);
+    max-width: none;
 }
 
 .form-group__label {
@@ -242,10 +257,12 @@ body {
 }
 
 .results-actions {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-xl);
-    max-width: 800px;
+    max-width: none;
     margin-bottom: var(--spacing-3xl);
+    grid-column: 2;
+    grid-row: 2;
 }
 
 /* ===== MODAL STYLES ===== */
