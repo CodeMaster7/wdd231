@@ -2,55 +2,49 @@
 <html lang="en" data-theme="light">
 	<head>
 		<!-- Document encoding and viewport settings -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Page title shown in browser tab -->
 		<title>Frontend Quiz - Test Your Skills</title>
 
 		<!-- SEO meta tags for search engines -->
-		<meta
-			name="description"
-			content="Test your frontend development knowledge with our interactive quiz covering HTML, CSS, JavaScript, and Accessibility."
-		/>
-		<meta name="author" content="Sam Bonfanti" />
+		<meta name="description" content="Test your frontend development knowledge with our interactive quiz covering HTML, CSS, JavaScript, and Accessibility.">
+		<meta name="author" content="Sam Bonfanti">
 
 		<!-- Open Graph meta tags for social media sharing -->
-		<meta property="og:title" content="Frontend Quiz - Test Your Skills" />
-		<meta
-			property="og:description"
-			content="Interactive quiz for frontend developers covering HTML, CSS, JavaScript, and Accessibility."
-		/>
-		<meta property="og:image" content="images/favicon-32x32.png" />
-		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/final/index.html" />
+		<meta property="og:title" content="Frontend Quiz - Test Your Skills">
+		<meta property="og:description" content="Interactive quiz for frontend developers covering HTML, CSS, JavaScript, and Accessibility.">
+		<meta property="og:image" content="https://github.com/CodeMaster7/wdd231/blob/main/final/images/favicon-32x32.png">
+		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/final/index.html">
 
 		<!-- Browser favicon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 
 		<!-- CSS stylesheets loaded in mobile-first order -->
-		<link rel="stylesheet" href="styles/normalize.css" />
-		<link rel="stylesheet" href="styles/mobile.css" />
-		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
-		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/mobile.css">
+		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)">
+		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)">
 
 		<!-- JavaScript module for home page functionality -->
-		<script type="module" src="scripts/home.mjs" defer></script>
+		<script type="module" src="scripts/home.mjs"></script>
 	</head>
 	<body>
 		<!-- Header section with theme toggle -->
 		<header class="quiz__header">
 			<!-- Theme toggle button for light/dark mode switching -->
-			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+			<div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
 				<!-- Sun icon for light theme -->
-				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="">
 				<!-- Toggle switch container -->
 				<div class="theme-toggle__switch">
 					<!-- Sliding button inside the switch -->
 					<div class="theme-toggle__button"></div>
 				</div>
 				<!-- Moon icon for dark theme -->
-				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
-			</button>
+				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="">
+			</div>
 		</header>
 
 		<!-- Main content area -->
@@ -74,19 +68,19 @@
 					<div class="subject-grid">
 						<!-- HTML Quiz Link -->
 						<a href="quiz.html?subject=HTML" class="subject-btn">
-							<img class="subject-btn__icon" src="images/icon-html.svg" alt="HTML icon" />
+							<img class="subject-btn__icon" src="images/icon-html.svg" alt="HTML icon">
 							<span class="subject-btn__text">HTML</span>
 						</a>
 
 						<!-- CSS Quiz Link -->
 						<a href="quiz.html?subject=CSS" class="subject-btn">
-							<img class="subject-btn__icon" src="images/icon-css.svg" alt="CSS icon" />
+							<img class="subject-btn__icon" src="images/icon-css.svg" alt="CSS icon">
 							<span class="subject-btn__text">CSS</span>
 						</a>
 
 						<!-- JavaScript Quiz Link -->
 						<a href="quiz.html?subject=JavaScript" class="subject-btn">
-							<img class="subject-btn__icon" src="images/icon-js.svg" alt="JavaScript icon" />
+							<img class="subject-btn__icon" src="images/icon-js.svg" alt="JavaScript icon">
 							<span class="subject-btn__text">JavaScript</span>
 						</a>
 
@@ -96,7 +90,7 @@
 								class="subject-btn__icon"
 								src="images/icon-accessibility.svg"
 								alt="Accessibility icon"
-							/>
+							>
 							<span class="subject-btn__text">Accessibility</span>
 						</a>
 					</div>
