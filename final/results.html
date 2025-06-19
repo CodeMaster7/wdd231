@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz Results - Frontend Quiz</title>
+		<meta name="description" content="View your quiz results and performance summary." />
+		<meta name="author" content="Sam Bonfanti" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/mobile.css" />
+		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
+		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+		<script type="module" src="scripts/results.mjs" defer></script>
+	</head>
+	<body>
+		<header class="quiz__header">
+			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<div class="theme-toggle__switch">
+					<div class="theme-toggle__button"></div>
+				</div>
+				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
+			</button>
+		</header>
+
+		<main class="quiz__main">
+			<section class="results-display">
+				<div class="results-display__content">
+					<h2 class="results-display__heading">Results Saved Successfully!</h2>
+					<p class="results-display__subtitle">Thank you for taking the quiz. Here's your summary:</p>
+				</div>
+
+				<div class="results-card">
+					<div class="results-card__header">
+						<h3 class="results-card__title">Quiz Summary</h3>
+					</div>
+
+					<div class="results-card__body">
+						<div class="results-section">
+							<h4 class="results-section__title">Participant Information</h4>
+							<div class="results-data">
+								<div class="results-data__item">
+									<span class="results-data__label">Name:</span>
+									<span class="results-data__value" id="displayName">-</span>
+								</div>
+								<div class="results-data__item">
+									<span class="results-data__label">Email:</span>
+									<span class="results-data__value" id="displayEmail">-</span>
+								</div>
+								<div class="results-data__item">
+									<span class="results-data__label">Date Completed:</span>
+									<span class="results-data__value" id="displayDate">-</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="results-section">
+							<h4 class="results-section__title">Quiz Performance</h4>
+							<div class="results-data">
+								<div class="results-data__item">
+									<span class="results-data__label">Subject:</span>
+									<span class="results-data__value" id="displaySubject">-</span>
+								</div>
+								<div class="results-data__item">
+									<span class="results-data__label">Score:</span>
+									<span class="results-data__value" id="displayScore">-</span>
+								</div>
+								<div class="results-data__item">
+									<span class="results-data__label">Percentage:</span>
+									<span class="results-data__value" id="displayPercentage">-</span>
+								</div>
+								<div class="results-data__item">
+									<span class="results-data__label">Difficulty Rating:</span>
+									<span class="results-data__value" id="displayDifficulty">-</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="results-section">
+							<div class="grade-display" id="gradeDisplay">
+								<div class="grade-display__label">Performance Grade</div>
+								<div class="grade-display__grade" id="performanceGrade">-</div>
+								<div class="grade-display__message" id="gradeMessage">-</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="results-actions">
+					<a href="index.html" class="btn btn--primary">Take Another Quiz</a>
+					<button type="button" class="btn btn--secondary" id="shareResults">Share Results</button>
+					<button type="button" class="btn btn--secondary" id="printResults">Print Results</button>
+				</div>
+
+				<div class="history-section">
+					<h3 class="history-section__title">Your Quiz History</h3>
+					<div class="history-list" id="historyList"></div>
+				</div>
+			</section>
+		</main>
+
+		<div class="modal" id="shareModal" style="display: none">
+			<div class="modal__content">
+				<div class="modal__header">
+					<h3 class="modal__title">Share Your Results</h3>
+					<button class="modal__close" id="closeModal" aria-label="Close modal">&times;</button>
+				</div>
+				<div class="modal__body">
+					<p>Share your quiz achievement:</p>
+					<textarea class="share-text" id="shareText" readonly></textarea>
+					<button class="btn btn--primary" id="copyShare">Copy to Clipboard</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
