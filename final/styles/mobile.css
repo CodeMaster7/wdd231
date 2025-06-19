@@ -576,13 +576,18 @@ body {
     color: var(--color-primary);
 }
 
+/* Dark mode indicator styling */
+[data-theme="dark"] .answer-option__indicator {
+    color: var(--color-background);
+}
+
 .answer-option__text {
-	flex: 1;
-	color: var(--color-text-primary);
-	font-size: var(--font-size-base);
-	line-height: 1.4;
-	word-break: break-all;
-	white-space: pre-wrap;
+    flex: 1;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    word-break: break-all;
+    white-space: pre-wrap;
 }
 
 .answer-option__icon {
@@ -887,7 +892,7 @@ body {
 
 .grade-display__label {
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
+    color: var(--color-background);
     margin-bottom: var(--spacing-sm);
 }
 
