@@ -2,43 +2,43 @@
 <html lang="en" data-theme="light">
 	<head>
 		<!-- Document encoding and viewport settings -->
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Page title shown in browser tab -->
 		<title>Quiz Results - Frontend Quiz</title>
 
 		<!-- SEO meta tags for search engines -->
-		<meta name="description" content="View your quiz results and performance summary." />
-		<meta name="author" content="Sam Bonfanti" />
+		<meta name="description" content="View your quiz results and performance summary.">
+		<meta name="author" content="Sam Bonfanti">
 
 		<!-- Browser favicon -->
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 
 		<!-- CSS stylesheets loaded in mobile-first order -->
-		<link rel="stylesheet" href="styles/normalize.css" />
-		<link rel="stylesheet" href="styles/mobile.css" />
-		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
-		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/mobile.css">
+		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)">
+		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)">
 
 		<!-- JavaScript module for results page functionality -->
-		<script type="module" src="scripts/results.mjs" defer></script>
+		<script type="module" src="scripts/results.mjs"></script>
 	</head>
 	<body>
 		<!-- Header section with theme toggle -->
 		<header class="quiz__header">
 			<!-- Theme toggle button for light/dark mode switching -->
-			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+			<div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
 				<!-- Sun icon for light theme -->
-				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="">
 				<!-- Toggle switch container -->
 				<div class="theme-toggle__switch">
 					<!-- Sliding button inside the switch -->
 					<div class="theme-toggle__button"></div>
 				</div>
 				<!-- Moon icon for dark theme -->
-				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
-			</button>
+				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="">
+			</div>
 		</header>
 
 		<!-- Main content area -->
