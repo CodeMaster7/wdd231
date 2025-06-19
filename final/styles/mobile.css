@@ -164,6 +164,7 @@ body {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+    font-size: 1rem; /* 16px fallback for screen readers */
 }
 
 /* Loading screen styles */
@@ -414,6 +415,7 @@ body {
 }
 
 .welcome__subtitle {
+    font-size: 0.875rem; /* 14px fallback */
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
     margin: 0;
@@ -481,6 +483,7 @@ body {
 }
 
 .quiz-question__text {
+    font-size: 1.25rem; /* 20px fallback */
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-medium);
     line-height: 1.3;
@@ -699,6 +702,7 @@ body {
 }
 
 .quiz-results__heading {
+    font-size: 1.5rem; /* 24px fallback */
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-normal);
     line-height: 1.2;
@@ -808,6 +812,7 @@ body {
 }
 
 .results-display__heading {
+    font-size: 1.5rem; /* 24px fallback */
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
@@ -836,6 +841,7 @@ body {
 }
 
 .results-card__title {
+    font-size: 1.125rem; /* 18px fallback */
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
     margin: 0;
@@ -854,6 +860,7 @@ body {
 }
 
 .results-section__title {
+    font-size: 1rem; /* 16px fallback */
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
@@ -932,6 +939,7 @@ body {
 }
 
 .history-section__title {
+    font-size: 1.125rem; /* 18px fallback */
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
@@ -1070,6 +1078,7 @@ body {
 }
 
 .modal__title {
+    font-size: 1.125rem; /* 18px fallback */
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
