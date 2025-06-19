@@ -70,7 +70,7 @@ body {
 /* ===== QUIZ QUESTION SCREEN ===== */
 .quiz-question {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-3xl);
     align-items: start;
 }
@@ -116,6 +116,10 @@ body {
     margin: 0 auto;
     font-size: var(--font-size-lg);
     padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.results-form .btn--primary {
+    margin-bottom: 2rem;
 }
 
 /* ===== QUIZ RESULTS SCREEN ===== */
@@ -183,11 +187,11 @@ body {
 }
 
 .results-actions {
-	display: flex;
-	justify-content: center;
-	gap: var(--spacing-lg);
-	max-width: 600px;
-	margin: 0 auto var(--spacing-2xl) auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-2xl) auto;
 }
 
 /* ===== HISTORY SECTION ===== */
