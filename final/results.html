@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 	<head>
+		<!-- Document encoding and viewport settings -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Page title shown in browser tab -->
 		<title>Quiz Results - Frontend Quiz</title>
+
+		<!-- SEO meta tags for search engines -->
 		<meta name="description" content="View your quiz results and performance summary." />
 		<meta name="author" content="Sam Bonfanti" />
+
+		<!-- Browser favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+
+		<!-- CSS stylesheets loaded in mobile-first order -->
 		<link rel="stylesheet" href="styles/normalize.css" />
 		<link rel="stylesheet" href="styles/mobile.css" />
 		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
 		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+
+		<!-- JavaScript module for results page functionality -->
 		<script type="module" src="scripts/results.mjs" defer></script>
 	</head>
 	<body>
+		<!-- Header section with theme toggle -->
 		<header class="quiz__header">
+			<!-- Theme toggle button for light/dark mode switching -->
 			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+				<!-- Sun icon for light theme -->
 				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<!-- Toggle switch container -->
 				<div class="theme-toggle__switch">
+					<!-- Sliding button inside the switch -->
 					<div class="theme-toggle__button"></div>
 				</div>
+				<!-- Moon icon for dark theme -->
 				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
 			</button>
 		</header>
 
+		<!-- Main content area -->
 		<main class="quiz__main">
+			<!-- Results display section containing all quiz result information -->
 			<section class="results-display">
+				<!-- Results header with success message -->
 				<div class="results-display__content">
+					<!-- Main heading confirming results were saved -->
 					<h2 class="results-display__heading">Results Saved Successfully!</h2>
+					<!-- Subtitle thanking user and explaining content -->
 					<p class="results-display__subtitle">Thank you for taking the quiz. Here's your summary:</p>
 				</div>
 
+				<!-- Results card containing detailed quiz information -->
 				<div class="results-card">
+					<!-- Card header with title -->
 					<div class="results-card__header">
 						<h3 class="results-card__title">Quiz Summary</h3>
 					</div>
 
+					<!-- Card body containing all result data sections -->
 					<div class="results-card__body">
+						<!-- Participant information section -->
 						<div class="results-section">
 							<h4 class="results-section__title">Participant Information</h4>
+							<!-- Data container for participant details -->
 							<div class="results-data">
+								<!-- User's name display -->
 								<div class="results-data__item">
 									<span class="results-data__label">Name:</span>
 									<span class="results-data__value" id="displayName">-</span>
 								</div>
+								<!-- User's email display -->
 								<div class="results-data__item">
 									<span class="results-data__label">Email:</span>
 									<span class="results-data__value" id="displayEmail">-</span>
 								</div>
+								<!-- Quiz completion date display -->
 								<div class="results-data__item">
 									<span class="results-data__label">Date Completed:</span>
 									<span class="results-data__value" id="displayDate">-</span>
@@ -55,21 +85,27 @@
 							</div>
 						</div>
 
+						<!-- Quiz performance section -->
 						<div class="results-section">
 							<h4 class="results-section__title">Quiz Performance</h4>
+							<!-- Data container for quiz performance metrics -->
 							<div class="results-data">
+								<!-- Quiz subject display -->
 								<div class="results-data__item">
 									<span class="results-data__label">Subject:</span>
 									<span class="results-data__value" id="displaySubject">-</span>
 								</div>
+								<!-- Raw score display (e.g., 8/10) -->
 								<div class="results-data__item">
 									<span class="results-data__label">Score:</span>
 									<span class="results-data__value" id="displayScore">-</span>
 								</div>
+								<!-- Percentage score display (e.g., 80%) -->
 								<div class="results-data__item">
 									<span class="results-data__label">Percentage:</span>
 									<span class="results-data__value" id="displayPercentage">-</span>
 								</div>
+								<!-- User's difficulty rating of the quiz -->
 								<div class="results-data__item">
 									<span class="results-data__label">Difficulty Rating:</span>
 									<span class="results-data__value" id="displayDifficulty">-</span>
@@ -77,22 +113,31 @@
 							</div>
 						</div>
 
+						<!-- Grade display section with visual emphasis -->
 						<div class="results-section">
+							<!-- Grade display container with prominent styling -->
 							<div class="grade-display" id="gradeDisplay">
+								<!-- Grade label -->
 								<div class="grade-display__label">Performance Grade</div>
+								<!-- Large grade display (A, B, C, etc.) -->
 								<div class="grade-display__grade" id="performanceGrade">-</div>
+								<!-- Encouraging message based on performance -->
 								<div class="grade-display__message" id="gradeMessage">-</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
+				<!-- Action buttons for user navigation -->
 				<div class="results-actions">
+					<!-- Button to return to home page and take another quiz -->
 					<a href="index.html" class="btn btn--primary">Take Another Quiz</a>
 				</div>
 
+				<!-- Quiz history section for displaying past results -->
 				<div class="history-section">
 					<h3 class="history-section__title">Your Quiz History</h3>
+					<!-- Container for dynamically populated quiz history items -->
 					<div class="history-list" id="historyList"></div>
 				</div>
 			</section>
