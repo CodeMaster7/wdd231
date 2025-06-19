@@ -97,24 +97,6 @@ function showHistory() {
 	}
 }
 
-// Share results
-function shareResults() {
-	const data = getUrlParams()
-	const percentage = Math.round((data.score / data.total) * 100)
-	const shareText = `I just completed a ${data.subject} quiz and scored ${data.score}/${data.total} (${percentage}%)! 🎉`
-
-	document.getElementById('shareText').value = shareText
-	document.getElementById('shareModal').style.display = 'block'
-}
-
-// Copy to clipboard
-function copyToClipboard() {
-	const shareText = document.getElementById('shareText')
-	shareText.select()
-	document.execCommand('copy')
-	alert('Copied to clipboard!')
-}
-
 // Initialize results page
 function initResults() {
 	// Initialize theme
@@ -126,16 +108,7 @@ function initResults() {
 	// Show history
 	showHistory()
 
-	// Add event listeners
-	document.getElementById('shareResults').addEventListener('click', shareResults)
-	document.getElementById('copyShare').addEventListener('click', copyToClipboard)
-	document.getElementById('closeModal').addEventListener('click', function () {
-		document.getElementById('shareModal').style.display = 'none'
-	})
-
-	document.getElementById('printResults').addEventListener('click', function () {
-		window.print()
-	})
+	// No additional event listeners needed
 }
 
 // Start when page loads
