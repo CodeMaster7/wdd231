@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz - Frontend Quiz</title>
+		<meta
+			name="description"
+			content="Take the frontend development quiz covering HTML, CSS, JavaScript, and Accessibility."
+		/>
+		<meta name="author" content="Sam Bonfanti" />
+		<meta property="og:title" content="Frontend Quiz - Take the Quiz" />
+		<meta
+			property="og:description"
+			content="Interactive quiz for frontend developers covering HTML, CSS, JavaScript, and Accessibility."
+		/>
+		<meta property="og:image" content="images/favicon-32x32.png" />
+		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/final/quiz.html" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/mobile.css" />
+		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
+		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+		<script type="module" src="scripts/quiz.mjs" defer></script>
+	</head>
+	<body>
+		<header class="quiz__header">
+			<img class="quiz__subject-icon" id="subjectIcon" src="" alt="" />
+			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<div class="theme-toggle__switch"><div class="theme-toggle__button"></div></div>
+				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
+			</button>
+		</header>
+		<main class="quiz__main">
+			<section class="quiz-question" id="quizScreen">
+				<div class="quiz-question__content">
+					<p class="quiz-question__counter">
+						Question
+						<span id="currentQuestion">1</span>
+						of
+						<span id="totalQuestions">10</span>
+					</p>
+					<h2 class="quiz-question__text" id="questionText">Loading question...</h2>
+					<div class="quiz-question__progress">
+						<div class="quiz-question__progress-bar" id="progressBar"></div>
+					</div>
+				</div>
+				<form class="answer-form" id="answerForm">
+					<fieldset class="answer-form__fieldset">
+						<legend class="sr-only">Choose your answer</legend>
+						<div class="answer-options" id="answerOptions"></div>
+					</fieldset>
+					<button type="submit" class="btn btn--primary" id="submitAnswer" disabled>Submit Answer</button>
+					<button type="button" class="btn btn--secondary" id="nextQuestion" style="display: none">
+						Next Question
+					</button>
+				</form>
+				<div class="error-message" id="errorMessage" style="display: none">
+					<img src="images/icon-error.svg" alt="" class="error-message__icon" />
+					<span class="error-message__text">Please select an answer</span>
+				</div>
+			</section>
+			<section class="quiz-results" id="resultsScreen" style="display: none">
+				<div class="quiz-results__content">
+					<h2 class="quiz-results__heading">
+						Quiz completed
+						<strong>You scored...</strong>
+					</h2>
+				</div>
+				<div class="quiz-results__score-card">
+					<div class="quiz-results__subject">
+						<img class="quiz-results__icon" id="resultIcon" src="" alt="" />
+						<span class="quiz-results__subject-name" id="resultSubject"></span>
+					</div>
+					<div class="quiz-results__score" id="finalScore">0</div>
+					<div class="quiz-results__total">
+						out of
+						<span id="finalTotal">10</span>
+					</div>
+				</div>
+				<form class="results-form" id="resultsForm" action="results.html" method="GET">
+					<fieldset class="results-form__fieldset">
+						<legend class="results-form__legend">Save Your Results</legend>
+						<div class="form-group">
+							<label for="userName" class="form-group__label">Your Name *</label>
+							<input
+								type="text"
+								id="userName"
+								name="userName"
+								class="form-group__input"
+								required
+								pattern="[A-Za-z\s]{2,50}"
+								title="Please enter 2-50 characters, letters and spaces only"
+							/>
+						</div>
+						<div class="form-group">
+							<label for="userEmail" class="form-group__label">Email Address *</label>
+							<input type="email" id="userEmail" name="userEmail" class="form-group__input" required />
+						</div>
+						<div class="form-group">
+							<label for="difficulty" class="form-group__label">How would you rate this quiz?</label>
+							<select id="difficulty" name="difficulty" class="form-group__select">
+								<option value="">Select difficulty</option>
+								<option value="easy">Easy</option>
+								<option value="medium">Medium</option>
+								<option value="hard">Hard</option>
+							</select>
+						</div>
+					</fieldset>
+					<input type="hidden" id="hiddenSubject" name="subject" value="" />
+					<input type="hidden" id="hiddenScore" name="score" value="" />
+					<input type="hidden" id="hiddenTotal" name="total" value="" />
+					<input type="hidden" id="hiddenDate" name="date" value="" />
+					<button type="submit" class="btn btn--primary">Save Results</button>
+				</form>
+				<div class="results-actions">
+					<a href="index.html" class="btn btn--secondary">Take Another Quiz</a>
+					<button type="button" class="btn btn--secondary" id="playAgain">Play Again</button>
+				</div>
+			</section>
+			<section class="loading-screen" id="loadingScreen" style="display: none">
+				<div class="loading-spinner"></div>
+				<p class="loading-text">Loading quiz...</p>
+			</section>
+			<section class="error-screen" id="errorScreen" style="display: none">
+				<div class="error-content">
+					<img src="images/icon-error.svg" alt="" class="error-icon" />
+					<h2 class="error-title">Oops ! Something went wrong</h2>
+					<p class="error-message-text" id="errorText">Failed to load quiz data.</p>
+					<div class="error-actions">
+						<button type="button" class="btn btn--primary" id="retryButton">Try Again</button>
+						<a href="index.html" class="btn btn--secondary">Back to Home</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="sr-only" aria-live="polite" id="announcements"></div>
+	</body>
+</html>
