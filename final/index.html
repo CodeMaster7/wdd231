@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Quiz - Test Your Skills</title>
+		<meta
+			name="description"
+			content="Test your frontend development knowledge with our interactive quiz covering HTML, CSS, JavaScript, and Accessibility."
+		/>
+		<meta name="author" content="Sam Bonfanti" />
+		<meta property="og:title" content="Frontend Quiz - Test Your Skills" />
+		<meta
+			property="og:description"
+			content="Interactive quiz for frontend developers covering HTML, CSS, JavaScript, and Accessibility."
+		/>
+		<meta property="og:image" content="images/favicon-32x32.png" />
+		<meta property="og:url" content="https://sambonfanti.github.io/wdd231/final/index.html" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/mobile.css" />
+		<link rel="stylesheet" href="styles/tablet.css" media="(min-width: 768px)" />
+		<link rel="stylesheet" href="styles/desktop.css" media="(min-width: 1024px)" />
+		<script type="module" src="scripts/home.mjs" defer></script>
+	</head>
+	<body>
+		<header class="quiz__header">
+			<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+				<img class="theme-toggle__icon theme-toggle__icon--sun" src="images/icon-sun-light.svg" alt="" />
+				<div class="theme-toggle__switch">
+					<div class="theme-toggle__button"></div>
+				</div>
+				<img class="theme-toggle__icon theme-toggle__icon--moon" src="images/icon-moon-light.svg" alt="" />
+			</button>
+		</header>
+		<main class="quiz__main">
+			<section class="welcome" id="welcomeScreen">
+				<div class="welcome__content">
+					<h1 class="welcome__heading">
+						Welcome to the
+						<strong>Frontend Quiz !</strong>
+					</h1>
+					<h2 class="welcome__subtitle">Pick a subject to get started.</h2>
+				</div>
+				<div class="subject-selection">
+					<div class="subject-grid">
+						<a href="quiz.html?subject=HTML" class="subject-btn">
+							<img class="subject-btn__icon" src="images/icon-html.svg" alt="HTML icon" />
+							<span class="subject-btn__text">HTML</span>
+						</a>
+						<a href="quiz.html?subject=CSS" class="subject-btn">
+							<img class="subject-btn__icon" src="images/icon-css.svg" alt="CSS icon" />
+							<span class="subject-btn__text">CSS</span>
+						</a>
+						<a href="quiz.html?subject=JavaScript" class="subject-btn">
+							<img class="subject-btn__icon" src="images/icon-js.svg" alt="JavaScript icon" />
+							<span class="subject-btn__text">JavaScript</span>
+						</a>
+						<a href="quiz.html?subject=Accessibility" class="subject-btn">
+							<img
+								class="subject-btn__icon"
+								src="images/icon-accessibility.svg"
+								alt="Accessibility icon"
+							/>
+							<span class="subject-btn__text">Accessibility</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div class="sr-only" aria-live="polite" id="announcements"></div>
+	</body>
+</html>
