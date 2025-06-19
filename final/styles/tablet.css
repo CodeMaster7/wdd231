@@ -183,20 +183,11 @@ body {
 }
 
 .results-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--spacing-lg);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-2xl) auto;
-}
-
-/* ===== MODAL STYLES ===== */
-.modal__content {
-    max-width: 500px;
-}
-
-.share-text {
-    min-height: 120px;
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-lg);
+	max-width: 600px;
+	margin: 0 auto var(--spacing-2xl) auto;
 }
 
 /* ===== HISTORY SECTION ===== */
