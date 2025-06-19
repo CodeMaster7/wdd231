@@ -80,13 +80,35 @@ function showQuestion() {
 	question.options.forEach(function (option, index) {
 		const optionDiv = document.createElement('div')
 		optionDiv.className = 'answer-option'
-		optionDiv.innerHTML = `
-			<input type="radio" name="answer" value="${option}" class="answer-option__input" id="option${index}">
-			<label for="option${index}" class="answer-option__label">
-				<span class="answer-option__indicator">${String.fromCharCode(65 + index)}</span>
-				<span class="answer-option__text">${option}</span>
-			</label>
-		`
+
+		// Create input
+		const input = document.createElement('input')
+		input.type = 'radio'
+		input.name = 'answer'
+		input.value = option
+		input.className = 'answer-option__input'
+		input.id = 'option' + index
+
+		// Create label
+		const label = document.createElement('label')
+		label.htmlFor = 'option' + index
+		label.className = 'answer-option__label'
+
+		// Create indicator
+		const indicator = document.createElement('span')
+		indicator.className = 'answer-option__indicator'
+		indicator.textContent = String.fromCharCode(65 + index)
+
+		// Create text span
+		const textSpan = document.createElement('span')
+		textSpan.className = 'answer-option__text'
+		textSpan.textContent = option
+
+		// Append elements
+		label.appendChild(indicator)
+		label.appendChild(textSpan)
+		optionDiv.appendChild(input)
+		optionDiv.appendChild(label)
 		answerOptions.appendChild(optionDiv)
 	})
 
@@ -110,26 +132,16 @@ function checkAnswer() {
 	const correctAnswer = questions[currentQuestion].answer
 	const isCorrect = userAnswer === correctAnswer
 
-	// Get the label element to style
-	const selectedLabel = selected.parentElement.querySelector('.answer-option__label')
-
 	if (isCorrect) {
 		score++
-		selectedLabel.style.backgroundColor = '#26d0ce'
-		selectedLabel.style.color = 'white'
-		selectedLabel.style.borderColor = '#26d0ce'
+		selected.parentElement.classList.add('answer-option--correct')
 	} else {
-		selectedLabel.style.backgroundColor = '#ee5454'
-		selectedLabel.style.color = 'white'
-		selectedLabel.style.borderColor = '#ee5454'
+		selected.parentElement.classList.add('answer-option--incorrect')
 
 		// Show correct answer
 		const correctOption = document.querySelector(`input[value="${correctAnswer}"]`)
 		if (correctOption) {
-			const correctLabel = correctOption.parentElement.querySelector('.answer-option__label')
-			correctLabel.style.backgroundColor = '#26d0ce'
-			correctLabel.style.color = 'white'
-			correctLabel.style.borderColor = '#26d0ce'
+			correctOption.parentElement.classList.add('answer-option--correct')
 		}
 	}
 
@@ -161,6 +173,17 @@ function showResults() {
 	finalTotal.textContent = questions.length
 	resultSubject.textContent = getSubject()
 
+	// Set the results icon
+	const iconMap = {
+		HTML: 'images/icon-html.svg',
+		CSS: 'images/icon-css.svg',
+		JavaScript: 'images/icon-js.svg',
+		Accessibility: 'images/icon-accessibility.svg'
+	}
+	const resultIcon = document.getElementById('resultIcon')
+	resultIcon.src = iconMap[getSubject()] || ''
+	resultIcon.style.display = 'block'
+
 	// Fill hidden form fields
 	document.getElementById('hiddenSubject').value = getSubject()
 	document.getElementById('hiddenScore').value = score
@@ -181,15 +204,7 @@ async function initQuiz() {
 		return
 	}
 
-	// Update header icon
-	const iconMap = {
-		HTML: 'images/icon-html.svg',
-		CSS: 'images/icon-css.svg',
-		JavaScript: 'images/icon-js.svg',
-		Accessibility: 'images/icon-accessibility.svg'
-	}
-	subjectIcon.src = iconMap[getSubject()] || ''
-	subjectIcon.style.display = 'block'
+	// Header icon is not used - icon only shows in results
 
 	// Show first question
 	showQuestion()
