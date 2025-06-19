@@ -191,6 +191,25 @@ function showResults() {
 	document.getElementById('hiddenDate').value = new Date().toLocaleDateString()
 }
 
+// Modal functions
+function showModal() {
+	const modal = document.getElementById('instructionsModal')
+	modal.style.display = 'flex'
+	// Use setTimeout to allow display change to take effect before adding class
+	setTimeout(() => {
+		modal.classList.add('modal--show')
+	}, 10)
+}
+
+function hideModal() {
+	const modal = document.getElementById('instructionsModal')
+	modal.classList.remove('modal--show')
+	// Wait for animation to complete before hiding
+	setTimeout(() => {
+		modal.style.display = 'none'
+	}, 300)
+}
+
 // Initialize quiz
 async function initQuiz() {
 	// Initialize theme
@@ -226,6 +245,38 @@ async function initQuiz() {
 	// Play again button
 	document.getElementById('playAgain').addEventListener('click', function () {
 		window.location.reload()
+	})
+
+	// Modal event listeners
+	const instructionsBtn = document.getElementById('instructionsBtn')
+	const modalClose = document.getElementById('modalClose')
+	const modalConfirm = document.getElementById('modalConfirm')
+	const modalOverlay = document.querySelector('.modal__overlay')
+
+	// Show modal when instructions button is clicked
+	instructionsBtn.addEventListener('click', showModal)
+
+	// Hide modal when close button is clicked
+	modalClose.addEventListener('click', hideModal)
+
+	// Hide modal when confirm button is clicked
+	modalConfirm.addEventListener('click', hideModal)
+
+	// Hide modal when clicking outside the content
+	modalOverlay.addEventListener('click', function (e) {
+		if (e.target === modalOverlay) {
+			hideModal()
+		}
+	})
+
+	// Hide modal when pressing Escape key
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') {
+			const modal = document.getElementById('instructionsModal')
+			if (modal.classList.contains('modal--show')) {
+				hideModal()
+			}
+		}
 	})
 }
 
