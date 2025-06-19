@@ -269,11 +269,7 @@ body {
     padding: var(--spacing-2xl);
 }
 
-.share-text {
-    min-height: 150px;
-    padding: var(--spacing-xl);
-    font-size: var(--font-size-lg);
-}
+
 
 /* ===== HISTORY SECTION ===== */
 .history-section__title {
@@ -444,26 +440,4 @@ body {
 
 .desktop-flex {
     display: flex;
-}
-
-/* ===== PRINT OPTIMIZATIONS ===== */
-@media print {
-    .quiz {
-        max-width: none;
-        padding: 0;
-    }
-
-    .quiz__header {
-        margin-bottom: 2rem;
-    }
-
-    .quiz-question,
-    .quiz-results {
-        display: block;
-        animation: none;
-    }
-
-    .results-card {
-        break-inside: avoid;
-    }
 }
