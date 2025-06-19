@@ -69,55 +69,63 @@
 						<strong>You scored...</strong>
 					</h2>
 				</div>
-				<div class="quiz-results__score-card">
-					<div class="quiz-results__subject">
-						<img class="quiz-results__icon" id="resultIcon" src="" alt="" />
-						<span class="quiz-results__subject-name" id="resultSubject"></span>
+				<div class="quiz-results__score-section">
+					<div class="quiz-results__score-card">
+						<div class="quiz-results__subject">
+							<img class="quiz-results__icon" id="resultIcon" src="" alt="" />
+							<span class="quiz-results__subject-name" id="resultSubject"></span>
+						</div>
+						<div class="quiz-results__score" id="finalScore">0</div>
+						<div class="quiz-results__total">
+							out of
+							<span id="finalTotal">10</span>
+						</div>
 					</div>
-					<div class="quiz-results__score" id="finalScore">0</div>
-					<div class="quiz-results__total">
-						out of
-						<span id="finalTotal">10</span>
+					<form class="results-form" id="resultsForm" action="results.html" method="GET">
+						<fieldset class="results-form__fieldset">
+							<legend class="results-form__legend">Save Your Results</legend>
+							<div class="form-group">
+								<label for="userName" class="form-group__label">Your Name *</label>
+								<input
+									type="text"
+									id="userName"
+									name="userName"
+									class="form-group__input"
+									required
+									pattern="[A-Za-z\s]{2,50}"
+									title="Please enter 2-50 characters, letters and spaces only"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="userEmail" class="form-group__label">Email Address *</label>
+								<input
+									type="email"
+									id="userEmail"
+									name="userEmail"
+									class="form-group__input"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="difficulty" class="form-group__label">How would you rate this quiz?</label>
+								<select id="difficulty" name="difficulty" class="form-group__select">
+									<option value="">Select difficulty</option>
+									<option value="easy">Easy</option>
+									<option value="medium">Medium</option>
+									<option value="hard">Hard</option>
+								</select>
+							</div>
+						</fieldset>
+						<input type="hidden" id="hiddenSubject" name="subject" value="" />
+						<input type="hidden" id="hiddenScore" name="score" value="" />
+						<input type="hidden" id="hiddenTotal" name="total" value="" />
+						<input type="hidden" id="hiddenDate" name="date" value="" />
+						<button type="submit" class="btn btn--primary">Save Results</button>
+					</form>
+					<div class="results-actions">
+						<a href="index.html" class="btn btn--secondary">Take Another Quiz</a>
+						<button type="button" class="btn btn--secondary" id="playAgain">Play Again</button>
 					</div>
-				</div>
-				<form class="results-form" id="resultsForm" action="results.html" method="GET">
-					<fieldset class="results-form__fieldset">
-						<legend class="results-form__legend">Save Your Results</legend>
-						<div class="form-group">
-							<label for="userName" class="form-group__label">Your Name *</label>
-							<input
-								type="text"
-								id="userName"
-								name="userName"
-								class="form-group__input"
-								required
-								pattern="[A-Za-z\s]{2,50}"
-								title="Please enter 2-50 characters, letters and spaces only"
-							/>
-						</div>
-						<div class="form-group">
-							<label for="userEmail" class="form-group__label">Email Address *</label>
-							<input type="email" id="userEmail" name="userEmail" class="form-group__input" required />
-						</div>
-						<div class="form-group">
-							<label for="difficulty" class="form-group__label">How would you rate this quiz?</label>
-							<select id="difficulty" name="difficulty" class="form-group__select">
-								<option value="">Select difficulty</option>
-								<option value="easy">Easy</option>
-								<option value="medium">Medium</option>
-								<option value="hard">Hard</option>
-							</select>
-						</div>
-					</fieldset>
-					<input type="hidden" id="hiddenSubject" name="subject" value="" />
-					<input type="hidden" id="hiddenScore" name="score" value="" />
-					<input type="hidden" id="hiddenTotal" name="total" value="" />
-					<input type="hidden" id="hiddenDate" name="date" value="" />
-					<button type="submit" class="btn btn--primary">Save Results</button>
-				</form>
-				<div class="results-actions">
-					<a href="index.html" class="btn btn--secondary">Take Another Quiz</a>
-					<button type="button" class="btn btn--secondary" id="playAgain">Play Again</button>
 				</div>
 			</section>
 			<section class="loading-screen" id="loadingScreen" style="display: none">
